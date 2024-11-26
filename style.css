@@ -154,3 +154,19 @@ body {
     color: #81c718;
 
 }
+
+.barra {
+    overflow: hidden; /* Evita que elementos desbordados aparezcan fuera del contenedor */
+}
+
+.barra-img {
+    max-height: 40px; /* Tamaño máximo para limitar el crecimiento */
+    width: auto; /* Mantiene las proporciones */
+    max-width: 100%; /* Se asegura de que no se desborde del contenedor */
+}
+
+@media (max-width: 576px) {
+    .barra-img {
+        max-height: 40px; /* Reduce el tamaño máximo para pantallas pequeñas */
+    }
+}
