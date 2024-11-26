@@ -36,7 +36,7 @@
 
     <!-- Foto Section -->
     <nav class="foto rounded-5 mt-2">
-        <div class="container-md">
+        <div class="container-md d-flex justify-content-center align-items-center">
             <div class="row">
                 <style>
                     .foto-img1 {
@@ -44,6 +44,12 @@
                         margin: 0 auto;
                         width: 400px;
                         height: auto;
+                    }
+                    .foto {
+                    display: flex; /* Habilita flexbox para centrar */
+                    justify-content: center; /* Centra horizontalmente */
+                    align-items: center; /* Centra verticalmente */
+                    height: 100%; /* Asegura que el contenedor use toda la altura disponible */
                     }
                 </style>
                 <div class="col p-center">
@@ -54,7 +60,7 @@
     </nav>
 
     <nav class="barra rounded-4 mt-3 p-center">
-        <div class="container-fluid pb-4 pt-2">
+        <div class="container-md pb-4 pt-2">
             <div class="barra-row row d-flex justify-content-between align-items-center">
                 <div class="col d-flex justify-content-center align-items-center">
                     <img src="pg.png" alt="pg" class="barra-img">
