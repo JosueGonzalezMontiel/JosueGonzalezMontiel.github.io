@@ -1,0 +1,156 @@
+
+body {
+    background-color:#050505;
+}
+
+.navbar {
+    background-color: #13151e;
+}
+
+
+.navbar:hover {
+    background-color: #1b202c;
+}
+.navbar-texts {
+    color: greenyellow;
+    
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+    color: greenyellow;
+    font-size: 30px;
+    font-family: Calibri; 
+}
+
+
+.btn {
+    background-color: #81c718;
+
+}
+
+.btn-texts {
+    color: rgb(250, 248, 248);
+    font-family: Calibri; 
+}
+
+.btn:hover {
+    background-color: greenyellow;
+    color: rgb(188, 190, 189);
+}
+
+.navbar-toggler-icon,
+.navbar-toggler {
+    background-color: #81c718;
+}
+
+
+
+.foto {
+    background-color: #1b202c;
+}
+
+.foto:hover {
+    background-color: #384053;
+}
+
+.barra,
+.menu
+ {
+    background-color: #13151e;
+
+}
+
+.footer {
+    background-color: #10121a;
+
+}
+.barra:hover {
+    background-color: #384053;
+}
+
+
+
+.barra-img1 {
+    display: block;
+     /* Centra la imagen horizontalmente */
+    width: 35px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+.barra-img2 {
+    display: block;
+     /* Centra la imagen horizontalmente */
+    width: 75px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+.barra-img3 {
+    display: block;
+      /* Centra la imagen horizontalmente */
+    width: 75px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+
+.barra-img4 {
+    display: block;
+   /* Centra la imagen horizontalmente */
+    width: 75px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+.barra-img5 {
+    display: block;
+     /* Centra la imagen horizontalmente */
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+.barra-img6 {
+    display: block;
+     /* Centra la imagen horizontalmente */
+    width: 40px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+
+.barra-row {
+    max-height: 25px;
+    justify-content: center;
+}
+
+.barra1-row {
+    max-height: 100px;
+    justify-content: center;
+}
+
+.card {
+    background-color:  #1b202c;
+}
+
+.card-body{
+    color: aliceblue;
+}
+.card:hover {
+    background-color:  #384053;
+}
+.card-img-top {
+    display: block;
+    margin: 0 auto;/* Centra la imagen horizontalmente */
+    width: 70px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    
+}
+
+.footer {
+    background-color: #12161e;
+}
+
+.footer:hover {
+    background-color: #384053;
+}
+.text-body-secondary-texts {
+    color: #81c718;
+
+}
