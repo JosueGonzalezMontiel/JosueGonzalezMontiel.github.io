@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #242430;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.formulario {
+    background-color: #2b2a3d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    color: #FEFFFF;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #7270EC;
+    border-radius: 5px;
+    background-color: #363548;
+    color: #FEFFFF;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-guardar {
+    background-color: #7270EC;
+    color: #FEFFFF;
+}
+
+.btn-eliminar {
+    background-color: #FF6B6B;
+    color: #FEFFFF;
+}
+
+.btn-borrar {
+    background-color: #747B8F;
+    color: #FEFFFF;
+}
+
+button:hover {
+    opacity: 0.8;
+}
