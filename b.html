@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>josuewww</title>
+    <link rel="icon" href="j.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid rgb(15, 206, 50);
+        }
+
+        #contador-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="bg-gradiant"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md rounded-4 mt-2 me-0">
+        <div class="container-md rounded-pill">
+            <a class="navbar-brand" href="#">
+                <img src="j.png" alt="" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item my-2">
+                        <a href="index.html" class="btn rounded-pill">Inicio</a>
+                    </li>
+                    <li class="nav-item my-2 mx-lg-3 mx-md-0">
+                        <a href="py.html" class="btn rounded-pill">Mis proyectos</a>
+                    </li>
+                    <li class="nav-item my-2">
+                        <a href="" class="btn rounded-pill">Sobre mí (CV)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Foto Section -->
+
+    
+
+    <nav class="barra rounded-4 mt-3 p-center me-0">
+        <div class="container-md pb-4 pt-2">
+            <div class="barra-row row d-flex justify-content-between align-items-center">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <img src="pg.png" alt="pg" class="barra-img">
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <img src="ms.png" alt="ms" class="barra-img">
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <img src="python.png" alt="python" class="barra-img">
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <img src="htmlcss.png" alt="htmlcss" class="barra-img">
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <img src="api.png" alt="api" class="barra-img">
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <img src="bt.png" alt="bt" class="barra-img">
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+       
+
+    <!-- Menu Section -->
+    <nav class="menu rounded-5 mt-5 p-center me-0 px-2 me-3 ms-2">
+        <div class="container-md">
+            <h1>Contador de Colisiones de la Bola</h1>
+            <h2>Desarrollo por metodos de graficacion con el componente canvas con animacion de movimiento de poligonos.</h2>
+            <canvas id="miCanvas2" width="400" height="300"></canvas>
+            <div id="contador-container">
+               
+                <p>Colisiones con la pared: <span id="contador">0</span></p>
+                <button id="reiniciar">Reiniciar Contador</button>
+
+        </div>
+    </nav>
+
+    <!-- Footer -->
+    <nav class="footer rounded-2 mt-3 p-center me-0">
+        <div class="container-md text-center text-white">
+            <div class="row pt-5">
+                <div class="col-4">
+                    <h1>Contacto</h1>
+                    <p>+52 222766416</p>
+                </div>
+                <div class="col-4">
+                    <h2>Hola</h2>
+                </div>
+                <div class="col-4">
+                  <h3>Correo</h3>
+                  <p>gonsales14<wbr>@live.com.mx</p>
+                </div>
+              
+            </div>
+            <div class="row text-center pt-3">
+                <div class="col-12">Derechos reservados</div>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script src="script2.js"></script>
+    <script src="loader.js"></script>
+</html>
