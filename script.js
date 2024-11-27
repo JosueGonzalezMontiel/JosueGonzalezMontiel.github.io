@@ -8,12 +8,12 @@ canvas.height = 400;
 // Propiedades iniciales de las bolas
 let bolas = [
     
-    { x: 150, y: 100, dx: -5, dy: 6, ancho: 80, alto: 8, color: "red" },
-    { x: 300, y: 200, dx: 7, dy: -6, ancho: 80, alto: 8, color: "red" },
-    { x: 400, y: 300, dx: -6, dy: -5, ancho: 80, alto: 8, color: "purple" },
-    { x: 100, y: 150, dx: -5, dy: 6, ancho: 80, alto: 8, color: "red" },
-    { x: 350, y: 250, dx: 7, dy: -6, ancho: 80, alto: 8, color: "blue" },
-    { x: 250, y: 350, dx: -6, dy: -5, ancho: 80, alto: 8, color: "purple" }
+    { x: 150, y: 100, dx: -5, dy: 6, ancho: 80, alto: 4, color: "red" },
+    { x: 300, y: 200, dx: 7, dy: -6, ancho: 80, alto:4, color: "red" },
+    { x: 400, y: 300, dx: -6, dy: -5, ancho: 80, alto: 4, color: "purple" },
+    { x: 100, y: 150, dx: -5, dy: 6, ancho: 80, alto: 4, color: "red" },
+    { x: 350, y: 250, dx: 7, dy: -6, ancho: 80, alto: 4, color: "blue" },
+    { x: 250, y: 350, dx: -6, dy: -5, ancho: 80, alto: 4, color: "purple" }
 ];
 
 // Función para dibujar una "bola" ovalada
