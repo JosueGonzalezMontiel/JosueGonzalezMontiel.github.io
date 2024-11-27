@@ -49,5 +49,7 @@ function animar() {
     requestAnimationFrame(animar); // Continuar la animación
 }
 
+
+
 // Iniciar la animación
 animar();
