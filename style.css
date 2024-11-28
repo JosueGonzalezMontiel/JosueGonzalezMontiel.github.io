@@ -6,7 +6,7 @@
     left: 0;
     height: 100vh; /* Cubre toda la altura de la pantalla */
     width: 100%; /* Cubre todo el ancho de la pantalla */
-    background-image: linear-gradient(60deg, black, orange, #030633, rgb(74, 4, 4), rgb(2, 47, 2));
+    background-image: linear-gradient(60deg, black, orange, black, rgb(140, 3, 3));
     z-index: -1; /* Manda el fondo a la capa más baja */
 }
 .hidden {
@@ -18,15 +18,25 @@
     justify-content: center;
     align-items: center;
 }
+
+.texto-animacion {
+    display: flex;
+    flex-direction: column; /* Disposición en columna */
+    align-items: center; /* Alinea el texto y la animación en el centro */
+    text-align: center; /* Centra el texto */
+}
+
 .lds-grid,
 .lds-grid div {
   box-sizing: border-box;
+  
 }
 .lds-grid {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
+  margin-top: 20px;
 }
 .lds-grid div {
   position: absolute;
