@@ -6,7 +6,7 @@
     left: 0;
     height: 100vh; /* Cubre toda la altura de la pantalla */
     width: 100%; /* Cubre todo el ancho de la pantalla */
-    background-image: linear-gradient(60deg, black, rgb(212, 8, 8), #030633, black);
+    background-image: linear-gradient(60deg, black, orange, #030633, rgb(74, 4, 4), rgb(2, 47, 2));
     z-index: -1; /* Manda el fondo a la capa más baja */
 }
 .hidden {
