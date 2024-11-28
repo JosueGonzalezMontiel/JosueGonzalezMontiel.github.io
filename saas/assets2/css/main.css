@@ -38,7 +38,7 @@ body {
 }
 
 a {
-  color: #59ab6e;
+  color: rgb(207, 136, 5);
   text-decoration: none;
 }
 
@@ -238,7 +238,7 @@ section {
 # Header
 --------------------------------------------------------------*/
 .topbar {
-  background: #59ab6e;
+  background: rgb(207, 136, 5);
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -313,7 +313,7 @@ section {
   margin: 0;
   font-weight: 600;
   letter-spacing: 0.8px;
-  color: #59ab6e;
+  color: #ffffff;
   font-family: var(--font-primary);
 }
 
@@ -499,7 +499,7 @@ section {
     inset: 0;
     padding: 50px 0 10px 0;
     margin: 0;
-    background: rgba(0, 131, 116, 0.9);
+    background: rgb(207, 136, 5);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -598,7 +598,7 @@ section {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 106, 93, 0.8);
+    background: rgba(253, 209, 128, 0.075);
     z-index: 9996;
   }
 }
@@ -650,7 +650,7 @@ section {
   font-size: 20px;
   left: 0;
   top: -3px;
-  color: var(--color-primary);
+  color: rgb(207, 136, 5);
 }
 
 .about .content p:last-child {
@@ -660,7 +660,7 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
+  background: radial-gradient(rgb(207, 136, 5) 50%, rgb(207, 136, 5)52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -681,7 +681,7 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(0, 131, 116, 0.7);
+  border: 5px rgb(207, 136, 5);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
@@ -720,7 +720,7 @@ section {
 }
 
 .about .play-btn:hover:after {
-  border-left: 15px solid var(--color-primary);
+  border-left: 15px rgb(207, 136, 5);
   transform: scale(20);
 }
 
@@ -799,7 +799,7 @@ section {
   font-size: 40px;
   display: block;
   font-weight: 700;
-  color: var(--color-primary);
+  color: rgb(207, 136, 5);
   line-height: 40px;
 }
 
@@ -1458,7 +1458,7 @@ section {
   margin: 30px auto 30px auto;
   width: 70px;
   height: 70px;
-  background: var(--color-primary);
+  background: orange;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1480,7 +1480,7 @@ section {
   height: 86px;
   width: 86px;
   border-radius: 50%;
-  background: #87c1bb;
+  background: rgb(207, 136, 5);
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
@@ -1491,7 +1491,7 @@ section {
   height: 102px;
   width: 102px;
   border-radius: 50%;
-  background: #d2eeeb;
+  background: rgba(242, 194, 105, 0.7);
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-2px);
 }
@@ -1551,8 +1551,8 @@ section {
   display: inline-block;
   padding: 10px 40px;
   border-radius: 50px;
-  color: var(--color-primary);
-  border: 1px solid rgba(0, 131, 116, 0.2);
+  color: rgb(207, 136, 5);
+  border: 1px solid rgb(207, 136, 5);
   transition: none;
   font-size: 16px;
   font-weight: 600;
@@ -1561,13 +1561,13 @@ section {
 }
 
 .pricing .buy-btn:hover {
-  background: var(--color-primary);
+  background: rgb(207, 136, 5);
   color: #fff;
 }
 
 .pricing .featured {
   z-index: 10;
-  border: 3px solid var(--color-primary);
+  border: 10px rgb(207, 136, 5);
 }
 
 @media (min-width: 992px) {
@@ -1842,7 +1842,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: var(--color-primary);
+  background: rgb(207, 136, 5);
   border: 0;
   padding: 14px 45px;
   color: #fff;
@@ -1851,7 +1851,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: rgba(0, 131, 116, 0.8);
+  background: rgb(250, 202, 113);
 }
 
 @keyframes animate-loading {
@@ -1884,7 +1884,7 @@ section {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #59ab6e;
+  color: rgb(207, 136, 5);
 }
 
 .hero p {
@@ -1963,7 +1963,7 @@ section {
   padding: 60px 30px;
   position: relative;
   overflow: hidden;
-  background: #59ab6e;
+  background: rgb(207, 136, 5);
   box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -1995,7 +1995,7 @@ section {
 }
 
 .hero .icon-box:hover {
-  background: #009786;
+  background: rgb(254, 193, 79);
 }
 
 .hero .icon-box:hover .title a,
@@ -2558,7 +2558,7 @@ section {
 --------------------------------------------------------------*/
 .footer {
   font-size: 14px;
-  background-color: var(--color-primary);
+  background-color: rgb(207, 136, 5);
   padding: 50px 0;
   color: white;
 }
