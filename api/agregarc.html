@@ -171,7 +171,7 @@
             formData.append('archivo', archivo);
 
             try {
-                const response = await fetch('http://127.0.0.1:8018/enviardatos_cliente/', {
+                const response = await fetch('https://final-api-p6mw.onrender.com/enviardatos_cliente/', {
                     method: 'POST',
                     body: formData
                 });
@@ -201,7 +201,7 @@
 
         // Funciones para Clientes
         function obtenerClientes() {
-            fetch('http://127.0.0.1:8018/clientes/')
+            fetch('https://final-api-p6mw.onrender.com/clientes/')
                 .then(response => response.json())
                 .then(data => {
                     const listaClientes = document.getElementById('listaClientes');
@@ -242,7 +242,7 @@
             const formulario = document.getElementById('formularioCliente');
             const datos = {};
             new FormData(formulario).forEach((value, key) => { datos[key] = value; });
-            fetch('http://127.0.0.1:8018/agregar_cliente', {method: 'POST',
+            fetch('https://final-api-p6mw.onrender.com/agregar_cliente', {method: 'POST',
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(Object.fromEntries(new FormData(formulario)))
@@ -265,7 +265,7 @@
             const datos = {};
             new FormData(formulario).forEach((value, key) => { datos[key] = value; });
             const nombre = datos['nombre']; // Asume que 'numero' es un identificador único
-            fetch(`http://127.0.0.1:8018/clientes/${nombre}`, {method: 'PUT',
+            fetch(`https://final-api-p6mw.onrender.com/clientes/${nombre}`, {method: 'PUT',
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(Object.fromEntries(new FormData(formulario)))
@@ -287,7 +287,7 @@
             const datos = {};
             new FormData(formulario).forEach((value, key) => { datos[key] = value; });
             const numero = datos['numero']; // Asume que 'numero' es un identificador único
-            fetch(`http://127.0.0.1:8018/clientes/${numero}`, {method: 'DELETE',
+            fetch(`https://final-api-p6mw.onrender.com/clientes/${numero}`, {method: 'DELETE',
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' }
             })
