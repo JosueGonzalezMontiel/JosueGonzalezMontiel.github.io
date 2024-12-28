@@ -1,0 +1,338 @@
+
+
+.bg-gradiant {
+    position: fixed; /* Fija el fondo a la pantalla */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Cubre toda la altura de la pantalla */
+    width: 100%; /* Cubre todo el ancho de la pantalla */
+    background-image: linear-gradient(60deg, rgb(65, 2, 2), orange, black, orange);
+    z-index: -1; /* Manda el fondo a la capa más baja */
+}
+.hidden {   
+    overflow: hidden;
+}
+.centrado {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-animacion {
+    display: flex;
+    flex-direction: column; /* Disposición en columna */
+    align-items: center; /* Alinea el texto y la animación en el centro */
+    text-align: center; /* Centra el texto */
+}
+
+.lds-grid,
+.lds-grid div {
+  box-sizing: border-box;
+  
+}
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+}
+.lds-grid div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: lds-grid 1.2s linear infinite;
+}
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  animation-delay: -1.6s;
+}
+@keyframes lds-grid {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+
+.navbar {
+    background-color: #13151e;
+}
+
+
+.navbar:hover {
+    background-color: #1b202c8e;
+}
+.navbar-texts {
+    color: greenyellow;
+    
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+    color: greenyellow;
+    font-size: 30px;
+    font-family: Calibri; 
+}
+
+
+.btn {
+    background-color: orange;
+
+}
+
+.btn-texts {
+    color: rgb(250, 248, 248);
+    font-family: Calibri; 
+}
+
+.btn:hover {
+    background-color: rgb(244, 196, 108);
+    color: rgb(188, 190, 189);
+}
+
+.navbar-toggler-icon,
+.navbar-toggler {
+    background-color: orange;
+}
+
+
+
+.foto {
+    background-color: #1b202c;
+}
+
+.foto:hover {
+    background-color: #384053;
+}
+
+.barra,
+.menu
+ {
+    background-color: #13151e4a;
+
+}
+
+.footer {
+    background-color: #10121a;
+
+}
+.barra:hover {
+    background-color: #3840538e;
+}
+
+
+
+.barra-img1 {
+    display: block;
+     /* Centra la imagen horizontalmente */
+    width: 35px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+.barra-img2 {
+    display: block;
+     /* Centra la imagen horizontalmente */
+    width: 75px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+.barra-img3 {
+    display: block;
+      /* Centra la imagen horizontalmente */
+    width: 75px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+
+.barra-img4 {
+    display: block;
+   /* Centra la imagen horizontalmente */
+    width: 75px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+.barra-img5 {
+    display: block;
+     /* Centra la imagen horizontalmente */
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+.barra-img6 {
+    display: block;
+     /* Centra la imagen horizontalmente */
+    width: 40px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0.5;
+}
+
+.barra-row {
+    max-height: 25px;
+    justify-content: center;
+}
+
+.barra1-row {
+    max-height: 100px;
+    justify-content: center;
+}
+
+.menu {
+    text-align: center;
+    padding: 20px;
+    background-color: #12161e; /* Fondo oscuro para contraste */
+    border-radius: 10px;
+}
+.menuf {
+    text-align: center;
+    padding: 20px;
+    background-color: #989ea900; /* Fondo oscuro para contraste */
+    border-radius: 10px;
+}
+
+/* Estilo para los botones */
+.button-group .button {
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: orange; /* Color azul */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block; /* Asegúrate de que sean visibles */
+    transition: all 0.3s ease-in-out; /* Transición para animaciones */
+}
+
+.button-group .button:hover {
+    background-color: rgb(244, 196, 108); /* Color más oscuro al pasar el mouse */
+}
+
+
+
+/* Estilos para los textos */
+.menu h1, 
+.menu h2, 
+.menu p {
+    color: rgb(124, 65, 65); /* Texto blanco */
+    font-family: 'Arial', sans-serif; /* Fuente alternativa */
+}
+
+/* Estilo para el span del contador */
+#contador {
+    font-weight: bold; /* Resalta el contador */
+    color: #ffcc00; /* Color amarillo para destacar */
+}
+
+/* Estilos para el botón */
+#reiniciar {
+    background-color: green; /* Fondo verde */
+    color: black; /* Texto negro */
+    border: none; /* Eliminar borde predeterminado */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-family: 'Arial', sans-serif; /* Fuente alternativa */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para el botón */
+#reiniciar:hover {
+    background-color: darkgreen; /* Fondo más oscuro al pasar el mouse */
+}
+
+
+
+.card { 
+    background-color:  #1b202c52;
+}
+
+.card-body{
+    color: aliceblue;
+}
+.card:hover {
+    background-color:  #38405384;
+}
+.card-img-top {
+    display: block;
+    margin: 0 auto;/* Centra la imagen horizontalmente */
+    width: 70px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    
+}
+
+.footer {
+    background-color: #12161e;
+}
+
+.footer:hover {
+    background-color: #384053;
+}
+.text-body-secondary-texts {
+    color: #81c718;
+
+}
+
+.barra {
+    overflow: hidden; /* Evita que elementos desbordados aparezcan fuera del contenedor */
+}
+
+.barra-img {
+    max-height: 40px; /* Tamaño máximo para limitar el crecimiento */
+    width: auto; /* Mantiene las proporciones */
+    max-width: 100%; /* Se asegura de que no se desborde del contenedor */
+}
+
+@media (max-width: 576px) {
+    .barra-img {
+        max-height: 40px; /* Reduce el tamaño máximo para pantallas pequeñas */
+    }
+}
