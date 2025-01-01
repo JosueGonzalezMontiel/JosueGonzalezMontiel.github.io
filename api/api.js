@@ -57,23 +57,37 @@ function obtenerClientes() {
 function llenarFormularioCliente() {
     const seleccionado = document.getElementById('listaClientes').selectedOptions[0];
     const cliente = JSON.parse(seleccionado.dataset.cliente);
-    const formulario = document.getElementById('formularioCliente');
-    formulario.innerHTML = '';
-    Object.keys(cliente).forEach(key => {
-        const label = document.createElement('label');
-        label.textContent = key + ': ';
-        label.classList.add('form-label');
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.name = key;
-        input.value = cliente[key];
-        input.classList.add('form-control');
-        input.placeholder = `Ingrese ${key}`;
-        formulario.appendChild(label);
-        formulario.appendChild(input);
-        formulario.appendChild(document.createElement('br'));
-    });
+
+    // Actualiza el formulario de clientes (si existe)
+    const formularioCliente = document.getElementById('formularioCliente');
+    if (formularioCliente) {
+        formularioCliente.innerHTML = ''; // Limpiar formulario anterior
+        Object.keys(cliente).forEach(key => {
+            const input = document.createElement('input');
+            input.type = 'hidden'; // Campos ocultos
+            input.name = key;
+            input.value = cliente[key];
+            formularioCliente.appendChild(input);
+        });
+    }
+
+    // Actualiza los campos en el formulario de factura
+    const formularioFactura = document.getElementById('formularioFactura');
+    if (formularioFactura) {
+        formularioFactura.querySelector('#id_cliente_id').value = cliente.id_cliente || '';
+        formularioFactura.querySelector('#nombre').value = cliente.nombre || '';
+        formularioFactura.querySelector('#numero').value = cliente.numero || '';
+        formularioFactura.querySelector('#Direccion').value = cliente.direccion || '';
+        formularioFactura.querySelector('#Colonia').value = cliente.colonia || '';
+        formularioFactura.querySelector('#Estado').value = cliente.estado || '';
+        formularioFactura.querySelector('#CP').value = cliente.cp || '';
+        formularioFactura.querySelector('#Pais').value = cliente.pais || '';
+        formularioFactura.querySelector('#numero_pagos').value = cliente.numero_pagos || '';
+        formularioFactura.querySelector('#orden_envio').value = cliente.orden_envio || '';
+    }
 }
+
+
 
 function enviarDatosCliente(event) {
     event.preventDefault();
@@ -163,26 +177,38 @@ function obtenerAutos() {
 function llenarFormularioAuto() {
     const seleccionado = document.getElementById('listaAutos').selectedOptions[0];
     const auto = JSON.parse(seleccionado.dataset.auto);
-    const formulario = document.getElementById('formularioAuto');
-    formulario.innerHTML = ''; // Limpiar formulario anterior
-
-    Object.keys(auto).forEach(key => {
-        const label = document.createElement('label');
-        label.textContent = key + ': ';
-        label.classList.add('form-label');
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.name = key;
-        input.value = auto[key];
-        input.classList.add('form-control');
-        input.placeholder = `Ingrese ${key}`;
-
-        // Añadir elementos al formulario
-        formulario.appendChild(label);
-        formulario.appendChild(input);
-        formulario.appendChild(document.createElement('br'));
-    });
+    // Actualiza el formulario de autos (si existe)
+    const formularioAuto = document.getElementById('formularioAuto');
+    if (formularioAuto) {
+        formularioAuto.innerHTML = ''; // Limpiar formulario anterior
+        Object.keys(auto).forEach(key => {
+            const input = document.createElement('input');
+            input.type = 'hidden'; // Campos ocultos
+            input.name = key;
+            input.value = auto[key];
+            formularioAuto.appendChild(input);
+        });
+    }
+    // Actualiza los campos en el formulario de factura
+    const formularioFactura = document.getElementById('formularioFactura');
+    if (formularioFactura) {
+        formularioFactura.querySelector('#referencia_id').value = auto.referencia || '';
+        formularioFactura.querySelector('#auto').value = auto.auto || '';
+        formularioFactura.querySelector('#modelo').value = auto.modelo || '';
+        formularioFactura.querySelector('#version').value = auto.version || '';
+        formularioFactura.querySelector('#color').value = auto.color || '';
+        formularioFactura.querySelector('#precio').value = auto.precio || '';
+        formularioFactura.querySelector('#transmision').value = auto.transmision || '';
+        formularioFactura.querySelector('#motor').value = auto.motor || '';
+        formularioFactura.querySelector('#n_motor').value = auto.n_motor || '';
+        formularioFactura.querySelector('#n_puertas').value = auto.n_puertas || '';
+        formularioFactura.querySelector('#tipo').value = auto.tipo || '';
+        formularioFactura.querySelector('#chasis').value = auto.chasis || '';
+        formularioFactura.querySelector('#fecha_aprovacion').value = auto.fecha_aprovacion || '';
+        formularioFactura.querySelector('#certificado').value = auto.certificado || '';
+    }
 }
+
 
 
 function enviarDatosAuto() {
