@@ -213,6 +213,29 @@
             </div>
         </div>
     </nav>
+    <script>
+        // Función para hacer la consulta inicial al servidor
+        function iniciarServidor() {
+            fetch('https://final-api-p6mw.onrender.com/clientes')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al iniciar el servidor.');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Servidor inicializado:', data);
+                })
+                .catch(error => {
+                    console.error('Error al iniciar el servidor:', error);
+                });
+        }
+
+        // Ejecutar la función cuando la página se cargue
+        document.addEventListener('DOMContentLoaded', () => {
+            iniciarServidor();
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
