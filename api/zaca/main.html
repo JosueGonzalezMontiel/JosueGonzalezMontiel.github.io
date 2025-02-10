@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>turismo zaca</title>
+    <style>
+        *{
+          margin: 0;
+        }
+        #particles-js{
+          background-color: #0c0c0c;
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          z-index: -1;
+        }
+      </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="foto rounded-5 mt-2 me-0">
+        <div class="container-md">
+            <!-- Fila para la imagen -->
+            <div class="row">
+                <div class="col text-center">
+                    <img src="img/LOGO.png" alt="Logo" class="foto-img1">
+                </div>
+            </div>
+            <!-- Fila para el navbar -->
+            <div class="row mt-3">
+                <div class="col">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded-3">
+                        <div class="container d-flex flex-column align-items-center">
+                            <!-- Botón centrado en pantallas pequeñas -->
+                            <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">BIENVENIDO</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">CIUDAD CON HISOTRIA</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">BIORUTA DEL CAFE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">ATRACTIVOS TURISTICOS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">CORREDOR ARTESANAL</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">RUTAS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">HOTELES Y CABAÑAS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">GASTRONOMIA</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            MAS
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">COMUNIDADES</a></li>
+                                            <li><a class="dropdown-item" href="#">TIANGUIS TRADICIONAL</a></li>
+                                            <li><a class="dropdown-item" href="#">RESERVA ONLINE</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <nav class="pres rounded-5 mt-5 mx-5 px-5">
+                <div class="container-md text-center">
+                    <!-- Título -->
+                    <h1 class="titulo">Bienvenido a Zacapoaxtla</h1>
+                    
+                    <!-- Párrafo -->
+                    <p class="descripcion">
+                        Enclavado en la sierra nororiental poblana, rodeado de montañas verdes, un clima característico, 
+                        nubes andantes y un ambiente colonial, se encuentra Zacapoaxtla, una población fundada en 1540 
+                        por Jacinto de Cortés también conocido como Fray Cintos, en el que podrás admirar sus calles, 
+                        sus monumentos y obras arquitectónicas que te envuelven por su imponencia e importancia.
+                    </p>
+                    
+                    <p class="descripcion">
+                        Este lugar te cautivará con su vasta naturaleza, gastronomía variada, su preservación cultural 
+                        y su gran historia de impacto nacional e internacional, convirtiéndolo en un destino al cual 
+                        no debes perder la oportunidad de visitar.
+                    </p>
+                </div>
+            </nav>
+            
+        </div>
+    </nav>
+
+    
+    
+    <nav class="sl rounded-1  me-0">
+        <div class="container1 "> <!-- Contenedor centrado -->
+            <div id="carouselExampleRide" class="carousel slide carousel-fade" data-bs-ride="carousel"><!-- Carrousel fade para desvanecido-->
+                <div class="carousel-indicators"><!-- esto es para poner los slides -->
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                
+                <div class="carousel-inner  px-3 ">
+                    <div class="carousel-item active ">
+                        <img src="img/uno.png" class="d-block w-100" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/1.jpg" class="d-block w-100" alt="Imagen 2">
+                        <div class="carousel-caption d-none d-md-block"><!-- Carrousel para poner texto -->
+                        
+                            <p>Zacapoaxtla.</p>
+                          </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/2.jpg" class="d-block w-100" alt="Imagen 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div id="particles-js"></div>  
+    </nav>
+    <div class="info container-fluid py-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6 text-center">
+                <h2>¿Cómo llegar a Zacapoaxtla?</h2>
+                <p>Existen tres formas de llegar a Zacapoaxtla; en autobús, en taxi y en carro particular, cada uno tiene diferentes montos y tiempos entre si.
+
+                    Desde la ciudad de Puebla puedes llegar a la Central de Autobuses (CAPU), dirigirte a las ventanillas de VIA y/o AU para comprar un pasaje directo a Zacapoaxtla o si lo prefieres, puedes tomar  cualquier opción de las líneas ATHA, VIA, AU y ADO y llegar a la central de Autobuses de Zaragoza  tomar un Taxi o una Sprinter con dirección a Zacapoaxtla, las cuales se encuentran justo a la salida de la terminal.</p>
+            </div>
+            <div class="col-md-6">
+                <div id="map" style="width: 100%; height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container3-fluid img-container ">
+        <img src="img/12.avif" alt="Descripción de la imagen">
+    </div>
+    <div class="items">
+        <div class="container4">
+            <h2 class="section-title">Título de la Sección</h2>
+            <div class="row">
+                <!-- Primera fila -->
+                <div class="col-md-3 text-center">
+                    <img src="img/1.jpg" alt="Imagen 1" class="img-fluid rounded-circle">
+                    <p>Monumental
+                        "Rosca                     
+                        de Reyes"</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="img/2.jpg" alt="Imagen 2" class="img-fluid rounded-circle">
+                    <p>Festival de la 
+                        "Torta de                        
+                        camarón"</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="img/3.jpg" alt="Imagen 3" class="img-fluid rounded-circle">
+                    <p>Callejoneada
+                        Zacapoaxtla </p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="img/4.jpg" alt="Imagen 4" class="img-fluid rounded-circle">
+                    <p>TFeria
+
+                        Zacapoaxtla</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Segunda fila -->
+                <div class="col-md-3 text-center">
+                    <img src="img/5.webp" alt="Imagen 5" class="img-fluid rounded-circle">
+                    <p>Flor más
+
+                        Bella</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="img/6.jpg" alt="Imagen 6" class="img-fluid rounded-circle">
+                    <p>Festival de
+
+                        "Medicina
+                        
+                        Tradicional"</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="img/7.jpg" alt="Imagen 7" class="img-fluid rounded-circle">
+                    <p>"Mitotikukakali"</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="img/8.webp" alt="Imagen 8" class="img-fluid rounded-circle">
+                    <p>Festival del 
+
+                        "Tayoyo 
+                        
+                        Ranchero"</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Tercera fila -->
+                <div class="col-md-3 text-center">
+                    <img src="img/9.jpg" alt="Imagen 9" class="img-fluid rounded-circle">
+                    <p>Festival del 
+
+                        "Chile en 
+                        
+                        Nogada"</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="img/1.jpg" alt="Imagen 10" class="img-fluid rounded-circle">
+                    <p>"La Fiesta Continua"
+
+                        Festival de la
+                        
+                        Independencia</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="img/1.jpg" alt="Imagen 11" class="img-fluid rounded-circle">
+                    <p>Desfile de
+
+                        Calaveras</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="img/1.jpg" alt="Imagen 12" class="img-fluid rounded-circle">
+                    <p>Festival
+
+                        "La Fiesta 
+                        
+                        de la Vida"</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Cuarta fila -->
+                <div class="col-md-3 text-center">
+                    <img src="img/2.jpg" alt="Imagen 13" class="img-fluid rounded-circle">
+                    <p>Festival
+
+                        "Una Navidad
+                        
+                        Mágica"</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="fot rounded-1">
+        <div class="container ">
+            <!-- Primera fila: Título -->
+            <div class="row text-center">
+                <div class="col">
+                    <h2 class="fot-title">Contacto</h2>
+                </div>
+            </div>
+    
+            <!-- Segunda fila: Imagen - Párrafo - Imagen -->
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="img/v.avif" alt="Imagen Izquierda" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4">
+                    <p class="fot-text">
+                        Dirección de Turismo Zacapoaxtla Puebla
+
+                        Plaza de la Constitución S/N Zacapoaxtla, Puebla
+                        
+                        TEL: 233 124 25 00                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="img/v.avif" alt="Imagen Derecha" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="foto3 rounded-5  me-0">
+        <div class="container-md">
+            <!-- Fila para la imagen -->
+            <div class="row">
+                <div class="col text-center">
+                    <img src="img/LOGO.png" alt="Logo" class="foto-img1">
+                </div>
+            </div>
+            <!-- Fila para el navbar -->
+            
+            
+            
+        </div>
+    </nav>
+    
+    
+    
+
+    </main>
+    
+      
+    
+    <style>
+    body {
+            background-color: black;
+            color: white; /* Para que el texto sea visible en el fondo oscuro */
+        }
+
+    .foto {
+            background-image: url('img/colla.png'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* La imagen cubre todo el contenedor */
+            background-position: center; /* Centrar la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            min-height: 60vh; /* Hace que ocupe al menos toda la altura de la pantalla */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .foto3 {
+            background-image: url('img/colla.png'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* La imagen cubre todo el contenedor */
+            background-position: center; /* Centrar la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            min-height: 20vh; /* Hace que ocupe al menos toda la altura de la pantalla */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+    /* Ajuste del logo */
+    .foto-img1 {
+        display: block;
+        margin: 0 auto;
+        width: 400px;
+        height: auto;
+    }
+
+    /* Hacer que el navbar tenga un fondo semi-transparente */
+    .navbar {
+        background-color: #796f6fac !important; /* Fondo blanco con opacidad */
+    }
+    .navbar:hover {
+    background-color: #07060685 !important;
+    }
+    /* Color blanco por defecto en todos los enlaces */
+    .navbar-nav .nav-link {
+        color: white !important;
+        transition: color 0.3s ease-in-out; /* Efecto de transición suave */
+    }
+
+    /* Cambio de color al pasar el cursor */
+    .navbar-nav .nav-item:nth-child(1) .nav-link:hover { color: #009cb3 !important; }
+    .navbar-nav .nav-item:nth-child(2) .nav-link:hover { color: #2ebb62 !important; }
+    .navbar-nav .nav-item:nth-child(3) .nav-link:hover { color: #d51955 !important; }
+    .navbar-nav .nav-item:nth-child(4) .nav-link:hover { color: #1080c3 !important; }
+    .navbar-nav .nav-item:nth-child(5) .nav-link:hover { color: #e96516 !important; }
+    .navbar-nav .nav-item:nth-child(6) .nav-link:hover { color: #95153f !important; }
+    .navbar-nav .nav-item:nth-child(7) .nav-link:hover { color: #00a0ae !important; }
+    .navbar-nav .nav-item:nth-child(8) .nav-link:hover { color: #2ebb62 !important; }
+    .navbar-nav .nav-item:nth-child(9) .nav-link:hover { color: #f18c2c !important; }
+
+    .pres {
+        background-color: #59535375 !important; /* Fondo blanco con opacidad */
+        color: white !important;
+        }
+    .pres h1, .pres p {
+    color: white !important;
+}
+    .pres:hover {
+    background-color: #2a29299d !important;
+    }
+
+    /* Establecer una altura fija para el navbar */
+    .sl {
+        height: 450px; /* Ajusta esta altura según tu diseño */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(161, 155, 155, 0); /* Fondo semi-transparente */
+        color: white ;
+    }
+
+    /* Contenedor centrado */
+    .container1 {
+        max-width: 1000px; /* Ajusta el ancho máximo */
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajustar el tamaño del carrusel */
+    .carousel {
+        max-width: 1000px; /* Ajusta este valor según el diseño */
+        margin: 0 auto; /* Centrar el carrusel */
+    }
+
+    /* Ajustar las imágenes del carrusel */
+    .carousel-inner img {
+        height: 400px; /* Define una altura fija */
+        object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    }
+    .info {
+        height: 450px; /* Ajusta esta altura según tu diseño */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(74, 73, 73, 0.414); /* Fondo semi-transparente */
+        color: #ece8e8 !important;
+    }
+    .info p {
+    color: white !important;
+    }
+    .info:hover {
+    background-color: #2a29299d !important;
+    }   
+    .img-container {
+        width: 100%;
+        height: 385px; /* Ajusta la altura según lo que necesites */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eef2f500; /* Opcional */
+        overflow: hidden; /* Evita que la imagen se salga del contenedor */
+
+        }
+
+    .img-container img {
+        max-width: 100%; /* Asegura que la imagen no sobrepase el contenedor */
+        max-height: 100%; /* Asegura que la imagen respete la altura del contenedor */
+        object-fit: contain; /* Evita que se recorte la imagen */
+        }
+
+     .items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa00; /* Fondo gris claro */
+    padding: 40px 0;
+    }
+    
+    .items p {
+    color: white !important;
+    }
+
+
+    .container4 {
+        background-color: rgba(74, 73, 73, 0.414); /* Fondo blanco */
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 1200px;
+    }
+    .container4:hover {
+    background-color: #050505d4 !important;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .img-fluid {
+        width: 100px; /* Tamaño de la imagen */
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #333;
+    }
+    .fot:hover {
+    background-color: #c7bcbc42 !important;
+    }
+    .fot {
+    background-color: #222 !important; /* Fondo oscuro */
+    padding: 40px 0; /* Espaciado arriba y abajo */
+    color: white !important; /* Asegura que todo el texto dentro de .fot sea blanco */
+}
+
+.fot-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white !important; /* Título blanco */
+}
+
+.fot-text {
+    font-size: 16px;
+    color: white !important; /* Texto del párrafo en blanco */
+    text-align: center;
+}
+    
+
+
+
+
+    
+    </style>
+    
+    
+    
+   
+</body>
+    <script src="scrip2.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEFseoj4t4scdX8IEbzOdNriBSVFiihhM&callback=iniciarMap" async defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
+    <script src="particles.min.js"></script>
+    <script>
+        particlesJS("particles-js",{
+                            
+                    "particles": {
+                    "number": {
+                    "value": 317,
+                    "density": {
+                        "enable": true,
+                        "value_area": 3074.497437918804
+                    }
+                    },
+                    "color": {
+                    "value": "#ffcd12"
+                    },
+                    "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#ef0a0a"
+                    },
+                    "polygon": {
+                        "nb_sides": 6
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                    },
+                    "opacity": {
+                    "value": 0.8040993299172257,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                    },
+                    "size": {
+                    "value": 7,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                    },
+                    "line_linked": {
+                    "enable": false,
+                    "distance": 409.9329917225072,
+                    "color": "#f4ebeb",
+                    "opacity": 0.4,
+                    "width": 2
+                    },
+                    "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "bottom",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "bubble"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "resize": true
+                    },
+                    "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                        "opacity": 0.5
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 4,
+                        "duration": 0.3,
+                        "opacity": 1,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                    }
+                },
+                "retina_detect": true
+         });
+        </script>
+</html>
