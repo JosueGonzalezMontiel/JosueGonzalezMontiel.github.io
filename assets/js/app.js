@@ -1,39 +1,58 @@
-(function() {
-    var inicio = document.getElementById("view-inicio");
-    var proyectos = document.getElementById("view-proyectos");
+var inicio = document.getElementById("view-inicio");
+var proyectos = document.getElementById("view-proyectos");
 
-    function mostrar(ruta) {
-        if (ruta === "/proyectos") {
-            inicio.style.display = "none";
-            proyectos.style.display = "";
-            proyectos.removeAttribute("hidden");
-        } else {
-            inicio.style.display = "";
-            inicio.removeAttribute("hidden");
-            proyectos.style.display = "none";
-        }
-    }
+function mostrarProyectos() {
+    inicio.style.display = "none";
+    proyectos.style.display = "block";
+}
 
-    function ir() {
-        var h = location.hash || "";
-        if (h.indexOf("proyectos") !== -1) {
-            mostrar("/proyectos");
-        } else {
-            mostrar("/inicio");
-        }
-    }
+function mostrarInicio() {
+    inicio.style.display = "block";
+    proyectos.style.display = "none";
+}
 
-    window.addEventListener("hashchange", ir);
+// Botones del navbar
+var btnInicio = document.querySelector('[data-nav="inicio"]');
+var btnProyectos = document.querySelector('[data-nav="proyectos"]');
 
-    document.addEventListener("click", function(e) {
-        var a = e.target.closest ? e.target.closest("a") : null;
-        if (a && a.href && a.href.indexOf("#/proyectos") !== -1) {
-            setTimeout(function() { mostrar("/proyectos"); }, 10);
-        }
-        if (a && a.href && a.href.indexOf("#/inicio") !== -1) {
-            setTimeout(function() { mostrar("/inicio"); }, 10);
-        }
+if (btnInicio) {
+    btnInicio.addEventListener("click", function(ev) {
+        ev.preventDefault();
+        location.hash = "#/inicio";
+        mostrarInicio();
     });
+}
 
-    ir();
-})();
+if (btnProyectos) {
+    btnProyectos.addEventListener("click", function(ev) {
+        ev.preventDefault();
+        location.hash = "#/proyectos";
+        mostrarProyectos();
+    });
+}
+
+// Boton "Ver proyectos" en inicio
+var btnVer = document.querySelector('a[href="#/proyectos"]');
+if (btnVer) {
+    btnVer.addEventListener("click", function(ev) {
+        ev.preventDefault();
+        location.hash = "#/proyectos";
+        mostrarProyectos();
+    });
+}
+
+// Por si cambia el hash manualmente
+window.addEventListener("hashchange", function() {
+    if (location.hash.indexOf("proyectos") !== -1) {
+        mostrarProyectos();
+    } else {
+        mostrarInicio();
+    }
+});
+
+// Estado inicial
+if (location.hash.indexOf("proyectos") !== -1) {
+    mostrarProyectos();
+} else {
+    mostrarInicio();
+}

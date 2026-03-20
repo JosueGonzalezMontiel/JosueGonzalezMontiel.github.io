@@ -321,8 +321,12 @@ body {
 }
 
 /* Routes */
-.route-view[hidden] {
-    display: none !important;
+/* Route views */
+.route-view {
+    display: none;
+}
+#view-inicio {
+    display: block;
 }
 
 /* Mobile tweaks */
