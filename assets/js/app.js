@@ -1,29 +1,44 @@
 var inicio = document.getElementById("view-inicio");
 var proyectos = document.getElementById("view-proyectos");
 
-function mostrarProyectos() {
-    inicio.style.cssText = "display:none !important";
-    proyectos.style.cssText = "display:block !important";
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+function mostrar(ruta) {
+    if (ruta === "proyectos") {
+        inicio.style.setProperty("display", "none", "important");
+        proyectos.style.setProperty("display", "block", "important");
+    } else {
+        inicio.style.setProperty("display", "block", "important");
+        proyectos.style.setProperty("display", "none", "important");
+    }
+    window.scrollTo(0, 0);
 }
 
-function mostrarInicio() {
-    inicio.style.cssText = "display:block !important";
-    proyectos.style.cssText = "display:none !important";
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+// Botones navbar
+var botones = document.querySelectorAll("[data-nav]");
+for (var i = 0; i < botones.length; i++) {
+    (function(btn) {
+        btn.addEventListener("click", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var destino = btn.getAttribute("data-nav");
+            mostrar(destino);
+            location.hash = "#/" + destino;
+        });
+    })(botones[i]);
 }
 
-// Listeners directos
-var btnInicio = document.querySelector('[data-nav="inicio"]');
-var btnProyectos = document.querySelector('[data-nav="proyectos"]');
-
-if (btnInicio) btnInicio.onclick = function() { mostrarInicio(); };
-if (btnProyectos) btnProyectos.onclick = function() { mostrarProyectos(); };
-
-var btnVer = document.querySelector('a[href="#/proyectos"]');
-if (btnVer) btnVer.onclick = function() { mostrarProyectos(); };
+// Boton "Ver proyectos" en inicio
+var verBtn = document.querySelector('a[href="#/proyectos"]');
+if (verBtn) {
+    verBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        mostrar("proyectos");
+        location.hash = "#/proyectos";
+    });
+}
 
 // Estado inicial
-mostrarInicio();
+if (location.hash && location.hash.indexOf("proyectos") !== -1) {
+    mostrar("proyectos");
+} else {
+    mostrar("inicio");
+}
