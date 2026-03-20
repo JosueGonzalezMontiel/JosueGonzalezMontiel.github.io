@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resumen de lo aprendido - Josue</title>
+  <link rel="icon" href="../../assets/img/j.png" type="image/png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 3rem 0;
+    }
+    .split.reverse { grid-template-columns: 1fr 1fr; }
+    .split .split-image { flex: 1 1 50%; }
+    .split .split-image img { width: 100%; height: auto; border-radius: 12px; }
+    .split .split-text { flex: 1 1 50%; font-size: 1.05rem; line-height: 1.6; }
+    @media (max-width: 900px) {
+      .split { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="is-loading" onload="document.body.classList.remove('is-loading')">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark p-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../../index.html#/proyectos">Proyectos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../../index.html#/inicio">Inicio</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <section class="intro mb-4 text-center">
+      <h1 class="display-5">Resumen de lo aprendido</h1>
+      <p class="lead">Breve resumen de lo que he aprendido a lo largo de mi formación.</p>
+    </section>
+
+    <section class="content">
+      <div class="split">
+        <div class="split-image"><img src="../../assets/img/IMGR/IMGR1.jpg" alt="Imagen 1" onerror="this.src='../../assets/img/IMGR/IMGR1.png'"></div>
+        <div class="split-text">
+          <p>Un resumen de lo que he aprendido</p>
+          <p>Gran parte de mis proyectos se enfocan en el desarrollo backend, donde he aprendido a construir aplicaciones completas entendiendo no solo el código, sino también los procesos detrás del desarrollo de software.</p>
+        </div>
+      </div>
+      <div class="split reverse">
+        <div class="split-image"><img src="../../assets/img/IMGR/IMGR2.jpg" alt="Imagen 2" onerror="this.src='../../assets/img/IMGR/IMGR2.png'"></div>
+        <div class="split-text">
+          <p>Mi principal stack es Python, aunque a lo largo de mi formación también he trabajado con Java, C, C++ y PHP. Esto me ha permitido entender diferentes enfoques de programación y fortalecer mi lógica.</p>
+        </div>
+      </div>
+      <div class="split">
+        <div class="split-image"><img src="../../assets/img/IMGR/IMGR3.jpg" alt="Imagen 3" onerror="this.src='../../assets/img/IMGR/IMGR3.png'"></div>
+        <div class="split-text">
+          <p>Aunque mi enfoque es backend, también tengo conocimientos de frontend, habiendo desarrollado interfaces desde cero con HTML, CSS, JavaScript y Bootstrap. Esto me permite comprender la integración completa entre cliente y servidor.</p>
+        </div>
+      </div>
+      <div class="split reverse">
+        <div class="split-image"><img src="../../assets/img/IMGR/IMGR4.jpg" alt="Imagen 4" onerror="this.src='../../assets/img/IMGR/IMGR4.png'"></div>
+        <div class="split-text">
+          <p>En el desarrollo de mis proyectos sigo un proceso estructurado que incluye:</p>
+          <ul>
+            <li>Recolección de requerimientos</li>
+            <li>Definición de casos de uso</li>
+            <li>Diseño de bases de datos normalizadas y relacionales</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mt-4 py-4 text-light bg-dark">
+    <div class="container text-center">Derechos reservados</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.querySelectorAll('img').forEach(i=>{i.onerror=null});</script>
+</body>
+</html>
