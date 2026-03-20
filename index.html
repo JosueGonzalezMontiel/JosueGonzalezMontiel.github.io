@@ -1,245 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>josuewww</title>
-    <link rel="icon" href="j.png" type="image/png">
+    <title>Josue Gonzalez | Portafolio</title>
+    <link rel="icon" href="assets/img/j.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="hidden">
-    <div class="centrado" id="onload">
+<body class="is-loading">
+    <div class="loading-overlay" id="onload" aria-hidden="true">
         <div class="texto-animacion">
-            <span class="ms-2 texto" style="font-size: 2rem; color: white; font-weight: bold;">
-                A.co<span style="color: orange;">d</span>e
+            <span class="brand-mark">
+                A.co<span class="brand-accent">d</span>e
             </span>
-            <div class="lds-grid">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="lds-grid" aria-hidden="true">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
             </div>
         </div>
     </div>
 
+    <div class="bg-gradiant" aria-hidden="true"></div>
 
-    <div class="bg-gradiant"></div>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md rounded-4 mt-2 me-0">
-        <div class="container-md rounded-pill">
-            <!-- Logo y texto A.code -->
-            <a class="navbar-brand d-flex align-items-center" href="#" style="text-decoration: none;">
-                
-                <span class="ms-2" style="font-size: 2rem; color: white; font-weight: bold;">
-                    A.co<span style="color: orange;">d</span>e
-                </span>
-            </a>
-            <!-- Botón para dispositivos móviles -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Opciones del navbar -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item my-2">
-                        <a href="index.html" class="btn rounded-pill">Inicio</a>
-                    </li>
-                    <li class="nav-item my-2 mx-lg-3 mx-md-0">
-                        <a href="py.html" class="btn rounded-pill">Mis proyectos</a>
-                    </li>
-                    <li class="nav-item my-2">
-                        <a href="cv.html" class="btn rounded-pill">Sobre mí (CV)</a>
-                    </li>
-                    
-                    <li class="nav-item my-2 mx-1">
-                        <a href="api/py.html" class="btn rounded-pill">factura</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-
-    <!-- Foto Section -->
-    <nav class="foto rounded-5 mt-2 me-0">
-        <div class="container-md d-flex justify-content-center align-items-center">
-            <div class="row">
-                <style>
-                    .foto-img1 {
-                        display: block;
-                        margin: 0 auto;
-                        width: 400px;
-                        height: auto;
-                        position: relative;
-                        z-index: 2; /* Imagen está en la capa superior */
-                    }
-                    .foto {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        height: 100%;
-                    }
-                    .canvas-container {
-                        position: relative;
-                        width: 100%;
-                        height: 300px;
-                    }
-                    #miCanvas {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        z-index: 1; /* Canvas está en la capa inferior */
-                    }
-                </style>
-                <div class="col p-center canvas-container">
-                    <img src="logo.png" alt="Logo" class="foto-img1">
-                    <canvas id="miCanvas" width="200" height="1000"></canvas>
-                    
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark rounded-4 mt-2 site-nav" data-bs-theme="dark">
+            <div class="container-md px-3">
+                <a class="navbar-brand d-flex align-items-center" href="#/inicio" style="text-decoration: none;">
+                    <span class="brand-mark">
+                        A.co<span class="brand-accent">d</span>e
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-md-center gap-md-2 py-2 py-md-0">
+                        <li class="nav-item">
+                            <a href="#/inicio" class="btn btn-accent rounded-pill nav-link-btn" data-nav="inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#/proyectos" class="btn btn-accent rounded-pill nav-link-btn" data-nav="proyectos">Mis proyectos</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </nav>
-    
+        </nav>
+    </header>
 
-    <nav class="barra rounded-4 mt-3 p-center me-0">
-        <div class="container-md pb-4 pt-2">
-            <div class="barra-row row d-flex justify-content-between align-items-center">
-                <div class="col d-flex justify-content-center align-items-center">
-                    <img src="pg.png" alt="pg" class="barra-img">
-                </div>
-                <div class="col d-flex justify-content-center align-items-center">
-                    <img src="ms.png" alt="ms" class="barra-img">
-                </div>
-                <div class="col d-flex justify-content-center align-items-center">
-                    <img src="python.png" alt="python" class="barra-img">
-                </div>
-                <div class="col d-flex justify-content-center align-items-center">
-                    <img src="htmlcss.png" alt="htmlcss" class="barra-img">
-                </div>
-                <div class="col d-flex justify-content-center align-items-center">
-                    <img src="api.png" alt="api" class="barra-img">
-                </div>
-                <div class="col d-flex justify-content-center align-items-center">
-                    <img src="bt.png" alt="bt" class="barra-img">
-                </div>
-            </div>
-        </div>
-    </nav>
-    
-
-       
-
-    <!-- Menu Section -->
-    <nav class="menu rounded-5 mt-5 p-center me-0 px-2 me-3 ms-2">
-        <div class="container-md">
-            <div class="row row-cols-1 row-cols-md-2 g-4 text-center">
-                <div class="col">
-                    <a href="https://www.instagram.com/josuewww____/" target="_blank" class="text-decoration-none">
-                        <div class="card rounded-4 pt-2">
-                            <img src="ig.png" class="card-img-top" alt="Instagram">
-                            <div class="card-body">
-                                <h5 class="card-title">Instagram</h5>
-                                <p class="card-text">Un poco más acerca de mi vida privada</p>
+    <main class="container-md px-3 site-main">
+        <section id="view-inicio" class="route-view" data-route="/inicio">
+            <section class="hero rounded-5 mt-2">
+                <div class="container-fluid px-3 px-md-4 py-4 py-md-5">
+                    <div class="row align-items-center g-4">
+                        <div class="col-12 col-lg-6">
+                            <p class="kicker">Portafolio</p>
+                            <h1 class="display-title">Josue Gonzalez</h1>
+                            <p class="lead lead-muted">Desarrollo web con Bootstrap, HTML, CSS, JavaScript y proyectos con PHP/MySQL.</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a class="btn btn-accent rounded-pill" href="#/proyectos">Ver proyectos</a>
+                                <a class="btn btn-ghost rounded-pill" href="assets/docs/documento.pdf" target="_blank" rel="noopener">Ver CV (PDF)</a>
                             </div>
                         </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="https://www.facebook.com/josue.gonsales.7" target="_blank" class="text-decoration-none">
-                        <div class="card rounded-4 pt-5">
-                            <img src="fb.png" class="card-img-top" alt="Facebook">
-                            <div class="card-body">
-                                <h5 class="card-title">Facebook</h5>
+                        <div class="col-12 col-lg-6">
+                            <div class="canvas-container">
+                                <img src="assets/img/logo.png" alt="Logo" class="foto-img1 img-fluid">
+                                <canvas id="miCanvas" aria-hidden="true"></canvas>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="row row-cols-1 row-cols-md-2 g-4 text-center mt-2 ">
-                <div class="col">
-                    <a href="https://www.linkedin.com/in/josue-gonzalez-357097199/" target="_blank" class="text-decoration-none">
-                        <div class="card rounded-4 pt-2">
-                            <img src="ln.png" class="card-img-top" alt="LinkedIn">
-                            <div class="card-body">
-                                <h5 class="card-title">LinkedIn</h5>
-                                <p class="card-text">Mi perfil profesional</p>
-                            </div>
-                        </div>
-                    </a>
+            <section class="barra rounded-4 mt-3">
+                <div class="container-md pb-4 pt-3">
+                    <div class="row g-3 align-items-center justify-content-between">
+                        <div class="col-4 col-sm-2 d-flex justify-content-center"><img src="assets/img/pg.png" alt="PostgreSQL" class="barra-img"></div>
+                        <div class="col-4 col-sm-2 d-flex justify-content-center"><img src="assets/img/ms.png" alt="MySQL" class="barra-img"></div>
+                        <div class="col-4 col-sm-2 d-flex justify-content-center"><img src="assets/img/python.png" alt="Python" class="barra-img"></div>
+                        <div class="col-4 col-sm-2 d-flex justify-content-center"><img src="assets/img/htmlcss.png" alt="HTML y CSS" class="barra-img"></div>
+                        <div class="col-4 col-sm-2 d-flex justify-content-center"><img src="assets/img/api.png" alt="API" class="barra-img"></div>
+                        <div class="col-4 col-sm-2 d-flex justify-content-center"><img src="assets/img/bt.png" alt="Bootstrap" class="barra-img"></div>
+                    </div>
                 </div>
-                <div class="col mb-4">
-                    <a href="https://github.com/josuewww98?tab=repositories" target="_blank" class="text-decoration-none">
-                        <div class="card rounded-4">
-                            <img src="gh.png" class="card-img-top" alt="GitHub">
-                            <div class="card-body">
-                                <h5 class="card-title">GitHub</h5>
-                                <p class="card-text">Mis proyectos (códigos)</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+            </section>
 
-    <!-- Footer -->
-    <nav class="footer rounded-2 mt-3 p-center me-0">
-        <div class="container-md text-center text-white">
-            <div class="row pt-5">
-                <div class="col-4">
-                    <h1>Contacto</h1>
-                    <p>+52 222766416</p>
+            <section class="menu rounded-5 mt-4">
+                <div class="container-md px-2 px-md-3 py-3">
+                    <div class="row row-cols-1 row-cols-md-2 g-3 text-center">
+                        <div class="col">
+                            <a href="https://www.instagram.com/josuewww____/" target="_blank" rel="noopener" class="text-decoration-none">
+                                <div class="card rounded-4 social-card h-100">
+                                    <div class="card-body">
+                                        <img src="assets/img/ig.png" class="social-icon" alt="Instagram">
+                                        <h5 class="card-title">Instagram</h5>
+                                        <p class="card-text">Un poco mas acerca de mi vida privada</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.facebook.com/josue.gonsales.7" target="_blank" rel="noopener" class="text-decoration-none">
+                                <div class="card rounded-4 social-card h-100">
+                                    <div class="card-body">
+                                        <img src="assets/img/fb.png" class="social-icon" alt="Facebook">
+                                        <h5 class="card-title">Facebook</h5>
+                                        <p class="card-text">Contacto y publicaciones</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/josue-gonzalez-357097199/" target="_blank" rel="noopener" class="text-decoration-none">
+                                <div class="card rounded-4 social-card h-100">
+                                    <div class="card-body">
+                                        <img src="assets/img/ln.png" class="social-icon" alt="LinkedIn">
+                                        <h5 class="card-title">LinkedIn</h5>
+                                        <p class="card-text">Mi perfil profesional</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://github.com/josuewww98?tab=repositories" target="_blank" rel="noopener" class="text-decoration-none">
+                                <div class="card rounded-4 social-card h-100">
+                                    <div class="card-body">
+                                        <img src="assets/img/gh.png" class="social-icon" alt="GitHub">
+                                        <h5 class="card-title">GitHub</h5>
+                                        <p class="card-text">Repositorios y codigo</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-4">
-                    <h2>Hola</h2>
+            </section>
+        </section>
+
+        <section id="view-proyectos" class="route-view" data-route="/proyectos" hidden>
+            <section class="menu rounded-5 mt-2">
+                <div class="container-md px-2 px-md-3 py-4">
+                    <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
+                        <div>
+                            <p class="kicker mb-1">Mis proyectos</p>
+                            <h2 class="section-title mb-0">Trabajo reciente</h2>
+                        </div>
+                        <a class="btn btn-ghost rounded-pill" href="assets/docs/documento.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+                    </div>
+
+                    <div class="row row-cols-1 row-cols-lg-2 g-3">
+                        <div class="col">
+                            <a href="saas/index_empresa.html" class="text-decoration-none" rel="noopener">
+                                <article class="card project-card rounded-4 h-100">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Landing para negocio</h3>
+                                        <p class="card-text">Ejemplo de pagina estatica con Bootstrap.</p>
+                                        <p class="meta">Actualizado: 26/11/2024</p>
+                                    </div>
+                                    <div class="project-media">
+                                        <img src="saas/saa.png" class="img-fluid" alt="Vista previa SaaS">
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+
+                        <div class="col">
+                            <a href="projects/contador/" class="text-decoration-none" rel="noopener">
+                                <article class="card project-card rounded-4 h-100">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Contador de colisiones</h3>
+                                        <p class="card-text">Canvas + animacion y contador de impactos.</p>
+                                        <p class="meta">Graficacion por computadora</p>
+                                    </div>
+                                    <div class="project-media">
+                                        <img src="assets/img/c.png" class="img-fluid" alt="Vista previa Contador">
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+
+                        <div class="col">
+                            <a href="tienda/index.html" class="text-decoration-none" rel="noopener">
+                                <article class="card project-card rounded-4 h-100">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Tienda digital</h3>
+                                        <p class="card-text">Software con PHP y MySQL.</p>
+                                        <p class="meta">Front + backend basico</p>
+                                    </div>
+                                    <div class="project-media">
+                                        <img src="tienda/images/pa.png" class="img-fluid" alt="Vista previa Tienda">
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+
+                        <div class="col">
+                            <a href="api/index.html" class="text-decoration-none" rel="noopener">
+                                <article class="card project-card rounded-4 h-100">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Sistema de ventas (Factura)</h3>
+                                        <p class="card-text">Flujo simple: generar factura, agregar auto y cliente.</p>
+                                        <p class="meta">Proyecto con formularios</p>
+                                    </div>
+                                    <div class="project-media">
+                                        <img src="api/proyecto1.jpg" class="img-fluid" alt="Vista previa Factura">
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-4">
-                  <h3>Correo</h3>
-                  <p>gonsales14<wbr>@live.com.mx</p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer rounded-2 mt-3">
+        <div class="container-md text-center text-white px-3">
+            <div class="row pt-5 g-3">
+                <div class="col-12 col-md-4">
+                    <h2 class="footer-title">Contacto</h2>
+                    <p class="mb-1">+52 222 766 416</p>
                 </div>
-              
+                <div class="col-12 col-md-4">
+                    <h2 class="footer-title">Correo</h2>
+                    <p class="mb-1">gonsales14<wbr>@live.com.mx</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h2 class="footer-title">CV</h2>
+                    <a class="btn btn-ghost rounded-pill" href="assets/docs/documento.pdf" target="_blank" rel="noopener">Abrir PDF</a>
+                </div>
             </div>
-            <div class="row text-center pt-3">
+            <div class="row text-center pt-4 pb-4">
                 <div class="col-12">Derechos reservados</div>
             </div>
         </div>
-    </nav>
-    <script>
-        // Función para hacer la consulta inicial al servidor
-        function iniciarServidor() {
-            fetch('https://final-api-p6mw.onrender.com/')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Error al iniciar el servidor.');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Servidor inicializado:', data);
-                })
-                .catch(error => {
-                    console.error('Error al iniciar el servidor:', error);
-                });
-        }
-
-        // Ejecutar la función cuando la página se cargue
-        document.addEventListener('DOMContentLoaded', () => {
-            iniciarServidor();
-        });
-    </script>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/canvas.js"></script>
+    <script src="assets/js/loader.js"></script>
 </body>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="script.js"></script>
-    <script src="loader.js"></script>
 </html>
