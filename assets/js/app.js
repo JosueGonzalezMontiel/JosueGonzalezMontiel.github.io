@@ -1,59 +1,39 @@
-(() => {
-    const views = {
-        "/inicio": document.getElementById("view-inicio"),
-        "/proyectos": document.getElementById("view-proyectos")
-    };
+(function() {
+    var inicio = document.getElementById("view-inicio");
+    var proyectos = document.getElementById("view-proyectos");
 
-    function showView(route) {
-        var el = views[route];
-        if (!el) {
-            el = views["/inicio"];
-            route = "/inicio";
+    function mostrar(ruta) {
+        if (ruta === "/proyectos") {
+            inicio.style.display = "none";
+            proyectos.style.display = "";
+            proyectos.removeAttribute("hidden");
+        } else {
+            inicio.style.display = "";
+            inicio.removeAttribute("hidden");
+            proyectos.style.display = "none";
         }
+    }
 
-        for (var key in views) {
-            var v = views[key];
-            if (v) {
-                if (key === route) {
-                    v.style.display = "";
-                    v.removeAttribute("hidden");
-                } else {
-                    v.style.display = "none";
-                    v.setAttribute("hidden", "");
-                }
-            }
+    function ir() {
+        var h = location.hash || "";
+        if (h.indexOf("proyectos") !== -1) {
+            mostrar("/proyectos");
+        } else {
+            mostrar("/inicio");
         }
-
-        document.querySelectorAll("[data-nav]").forEach(function(a) {
-            var nav = a.getAttribute("data-nav");
-            if (nav === route.replace("/", "")) {
-                a.classList.add("is-active");
-            } else {
-                a.classList.remove("is-active");
-            }
-        });
     }
 
-    function getRoute() {
-        var h = location.hash;
-        if (!h || h === "#" || h === "#/") return "/inicio";
-        var r = h.replace("#", "");
-        if (r.charAt(0) !== "/") r = "/" + r;
-        if (r === "/proyectos") return "/proyectos";
-        return "/inicio";
-    }
+    window.addEventListener("hashchange", ir);
 
-    function navigate() {
-        showView(getRoute());
-    }
+    document.addEventListener("click", function(e) {
+        var a = e.target.closest ? e.target.closest("a") : null;
+        if (a && a.href && a.href.indexOf("#/proyectos") !== -1) {
+            setTimeout(function() { mostrar("/proyectos"); }, 10);
+        }
+        if (a && a.href && a.href.indexOf("#/inicio") !== -1) {
+            setTimeout(function() { mostrar("/inicio"); }, 10);
+        }
+    });
 
-    window.addEventListener("hashchange", navigate);
-
-    if (!location.hash || location.hash === "#") {
-        location.hash = "#/inicio";
-    } else {
-        navigate();
-    }
-
-    fetch("https://final-api-p6mw.onrender.com/", { method: "GET" }).catch(function() {});
+    ir();
 })();
