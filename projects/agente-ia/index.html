@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente IA | Josue Gonzalez</title>
+    <link rel="icon" href="../../assets/img/j.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+
+<body class="is-loading">
+    <div class="loading-overlay" id="onload" aria-hidden="true">
+        <div class="texto-animacion">
+            <span class="brand-mark">A.co<span class="brand-accent">d</span>e</span>
+            <div class="lds-grid" aria-hidden="true">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradiant" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark rounded-4 mt-2 site-nav" data-bs-theme="dark">
+            <div class="container-md px-3">
+                <a class="navbar-brand d-flex align-items-center" href="../../index.html#/inicio"
+                    style="text-decoration: none;">
+                    <span class="brand-mark">A.co<span class="brand-accent">d</span>e</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-md-center gap-md-2 py-2 py-md-0">
+                        <li class="nav-item"><a href="../../index.html#/inicio"
+                                class="btn btn-accent rounded-pill" data-en="Home">Inicio</a></li>
+                        <li class="nav-item"><a href="../../index.html#/proyectos"
+                                class="btn btn-accent rounded-pill" data-en="My projects">Mis proyectos</a></li>
+                        <li class="nav-item">
+                            <select id="langSwitch" class="form-select form-select-sm bg-dark text-white border-secondary rounded-pill ms-md-2 mt-2 mt-md-0" style="min-width: 60px;">
+                                <option value="es">ES</option>
+                                <option value="en">EN</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-md px-3 site-main">
+        <section class="menu rounded-5 mt-3">
+            <div class="container-md px-2 px-md-3 py-4">
+                <p class="kicker" data-en="Portfolio">Portafolio</p>
+                <h1 class="display-title mb-4" data-en="AI Agent: creates, edits files and code">Agente IA: crea, edita archivos y codigo</h1>
+
+                <!-- Introduccion -->
+                <div class="mb-5 mt-4">
+                    <p class="lead lead-muted mb-3" style="max-width: 100%;" data-en="This project represents the development of an artificial intelligence agent capable of generating functional code, modifying and creating files autonomously, designed completely from scratch without the use of frameworks like LangChain or third-party automated tools.">Este proyecto representa el desarrollo de un agente de inteligencia artificial capaz de generar codigo funcional, modificar y crear archivos de forma autonoma, disenado completamente desde cero sin el uso de frameworks como LangChain ni tools automatizadas de terceros.</p>
+                    <p class="lead lead-muted mb-3" style="max-width: 100%;" data-en="Only the language model API and Python are used, which allowed an understanding of its architecture, behavior, and capabilities.">Solo se utiliza la API del modelo de lenguaje y Python, lo que permitio el entendimiento sobre su arquitectura, comportamiento y capacidades.</p>
+                </div>
+
+                <!-- Bloque 1: Arquitectura -->
+                <div class="row align-items-center g-4 mb-4">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG2/imagen1.png" alt="Arquitectura del sistema" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="System Architecture and Design">Arquitectura y Diseno del Sistema</h3>
+                        <p class="lead lead-muted" data-en="The project was structured with a modular approach to ensure order, scalability, and maintainability.">El proyecto fue estructurado con un enfoque modular para garantizar orden, escalabilidad y mantenibilidad.</p>
+                        <p class="lead lead-muted" data-en="Detailed documentation and the use of environment variables were implemented for a secure configuration.">Se implemento una documentacion detallada y el uso de variables de entorno para una configuracion segura.</p>
+                        <p class="lead lead-muted" data-en="As part of the learning process, a persistent memory system based on JSON files was developed, allowing the agent to maintain context between executions.">Como parte del proceso de aprendizaje, se desarrollo un sistema de memoria persistente basado en archivos JSON, permitiendo al agente mantener contexto entre ejecuciones.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 2: Contexto -->
+                <div class="row align-items-center g-4 mb-4 flex-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG2/imagen2.png" alt="Gestion del contexto" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="Intelligent Context Management">Gestion Inteligente del Contexto</h3>
+                        <p class="lead lead-muted" data-en="The agent incorporates a conversation history control system.">El agente incorpora un sistema de control del historial de conversacion.</p>
+                        <p class="lead lead-muted" data-en="When the context limit is exceeded, an intelligent summary is automatically executed, optimizing token usage without losing relevant information.">Cuando se supera el limite de contexto, se ejecuta automaticamente un resumen inteligente, optimizando el uso de tokens sin perder informacion relevante.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 3: Herramientas -->
+                <div class="row align-items-center g-4 mb-4">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG2/imagen3.png" alt="Herramientas personalizadas" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="Development of Custom Tools">Desarrollo de Herramientas Personalizadas</h3>
+                        <p class="lead lead-muted" data-en="All tools were designed and implemented manually, allowing for precise definition of how the agent interacts with its environment.">Todas las herramientas (tools) fueron disenadas e implementadas manualmente, permitiendo definir con precision como el agente interactua con el entorno.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 4: Integracion -->
+                <div class="row align-items-center g-4 mb-4 flex-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG2/imagen4.png" alt="Integracion de capacidades" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="Integration of Capabilities into the Agent">Integracion de Capacidades al Agente</h3>
+                        <p class="lead lead-muted" data-en="The developed tools are dynamically registered within the agent, enabling the execution of specific actions based on the context of the conversation.">Las herramientas desarrolladas son registradas dinamicamente dentro del agente, habilitando la ejecucion de acciones especificas segun el contexto de la conversacion.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 5: Decisiones -->
+                <div class="row align-items-center g-4 mb-4">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG2/imgen5.png" alt="Toma de decisiones" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="Intelligent Decision Making">Toma de Decisiones Inteligente</h3>
+                        <p class="lead lead-muted" data-en="The agent is capable of maintaining natural conversations and, at the same time, deciding when to use external tools, differentiating between conversational responses and executable actions.">El agente es capaz de mantener conversaciones naturales y, al mismo tiempo, decidir cuando utilizar herramientas externas, diferenciando entre respuestas conversacionales y acciones ejecutables.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 6: Generacion de codigo -->
+                <div class="row align-items-center g-4 mb-4 flex-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG2/imgen6.png" alt="Generacion de codigo" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="Autonomous Code Generation">Generacion Autonoma de Codigo</h3>
+                        <p class="lead lead-muted" data-en="The agent can create complete files with functional code, allowing the automation of development tasks and accelerating project creation.">El agente puede crear archivos completos con codigo funcional, permitiendo automatizar tareas de desarrollo y acelerar la creacion de proyectos.</p>
+                    </div>
+                </div>
+
+                <!-- Resultado Final -->
+                <div class="mb-4 mt-5">
+                    <h3 class="card-title mb-3" data-en="Final Result">Resultado Final</h3>
+                    <p class="lead lead-muted" style="max-width: 100%;" data-en="As a result, the agent was able to develop its own desktop graphical interface with Flet, demonstrating an advanced level of autonomy and practical application.">Como resultado, el agente fue capaz de desarrollar su propia interfaz grafica de escritorio con Flet, demostrando un nivel avanzado de autonomia y aplicacion practica.</p>
+                </div>
+
+                <div class="row g-4 mb-4 justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <img src="../../assets/img/IMG2/imgen8.png" alt="Resultado final - Interfaz grafica" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="../../index.html#/proyectos" class="btn btn-accent rounded-pill" data-en="Back to projects">Volver a proyectos</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer rounded-2 mt-3">
+        <div class="container-md text-center text-white px-3">
+            <div class="row pt-4 pb-4 g-2">
+                <div class="col-12" data-en="Back to portfolio: <a href='../../index.html#/proyectos' class='text-decoration-none' style='color: rgba(238,241,247,.95)'>My projects</a>">Volver al portafolio: <a href="../../index.html#/proyectos"
+                        class="text-decoration-none" style="color: rgba(238,241,247,.95)">Mis proyectos</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../../assets/js/loader.js"></script>
+
+    <style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll(".fade-in-up").forEach((img) => {
+                observer.observe(img);
+            });
+        });
+    </script>
+    <script src="../../assets/js/lang.js"></script>
+</body>
+
+</html>

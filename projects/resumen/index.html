@@ -1,21 +1,30 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumen de lo aprendido | Josue Gonzalez</title>
     <link rel="icon" href="../../assets/img/j.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
+
 <body class="is-loading">
     <div class="loading-overlay" id="onload" aria-hidden="true">
         <div class="texto-animacion">
             <span class="brand-mark">A.co<span class="brand-accent">d</span>e</span>
             <div class="lds-grid" aria-hidden="true">
-                <div></div><div></div><div></div>
-                <div></div><div></div><div></div>
-                <div></div><div></div><div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </div>
@@ -25,16 +34,26 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark rounded-4 mt-2 site-nav" data-bs-theme="dark">
             <div class="container-md px-3">
-                <a class="navbar-brand d-flex align-items-center" href="../../index.html#/inicio" style="text-decoration: none;">
+                <a class="navbar-brand d-flex align-items-center" href="../../index.html#/inicio"
+                    style="text-decoration: none;">
                     <span class="brand-mark">A.co<span class="brand-accent">d</span>e</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-md-center gap-md-2 py-2 py-md-0">
-                        <li class="nav-item"><a href="../../index.html#/inicio" class="btn btn-accent rounded-pill">Inicio</a></li>
-                        <li class="nav-item"><a href="../../index.html#/proyectos" class="btn btn-accent rounded-pill">Mis proyectos</a></li>
+                        <li class="nav-item"><a href="../../index.html#/inicio"
+                                class="btn btn-accent rounded-pill" data-en="Home">Inicio</a></li>
+                        <li class="nav-item"><a href="../../index.html#/proyectos"
+                                class="btn btn-accent rounded-pill" data-en="My projects">Mis proyectos</a></li>
+                        <li class="nav-item">
+                            <select id="langSwitch" class="form-select form-select-sm bg-dark text-white border-secondary rounded-pill ms-md-2 mt-2 mt-md-0" style="min-width: 60px;">
+                                <option value="es">ES</option>
+                                <option value="en">EN</option>
+                            </select>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -44,54 +63,30 @@
     <main class="container-md px-3 site-main">
         <section class="menu rounded-5 mt-3">
             <div class="container-md px-2 px-md-3 py-4">
-                <p class="kicker">Portafolio</p>
-                <h1 class="display-title mb-4">Resumen de lo aprendido</h1>
+                <p class="kicker" data-en="Portfolio">Portafolio</p>
+                <h1 class="display-title mb-4" data-en="Summary of learned skills">Resumen de lo aprendido</h1>
 
-                <!-- Bloque 1 -->
-                <div class="row align-items-center g-4 mb-4">
-                    <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/1.png" alt="Imagen 1" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <h3 class="card-title mb-3">Un resumen de lo que he aprendido</h3>
-                        <p class="lead lead-muted">Gran parte de mis proyectos se enfocan en el desarrollo backend, donde he aprendido a construir aplicaciones completas entendiendo no solo el codigo, sino tambien los procesos detras del desarrollo de software.</p>
-                    </div>
-                </div>
-
-                <!-- Bloque 2 -->
-                <div class="row align-items-center g-4 mb-4 flex-row-reverse">
-                    <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/2.png" alt="Imagen 2" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <h3 class="card-title mb-3">Stack principal</h3>
-                        <p class="lead lead-muted">Mi principal stack es Python, aunque a lo largo de mi formacion tambien he trabajado con Java, C, C++ y PHP. Esto me ha permitido entender diferentes enfoques de programacion y fortalecer mi logica.</p>
-                    </div>
-                </div>
-
-                <!-- Bloque 3 -->
-                <div class="row align-items-center g-4 mb-4">
-                    <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/3.png" alt="Imagen 3" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <h3 class="card-title mb-3">Frontend</h3>
-                        <p class="lead lead-muted">Aunque mi enfoque es backend, tambien tengo conocimientos de frontend, habiendo desarrollado interfaces desde cero con HTML, CSS, JavaScript y Bootstrap. Esto me permite comprender la integracion completa entre cliente y servidor.</p>
-                    </div>
+                <!-- Introduccion -->
+                <div class="mb-5 mt-4">
+                    <p class="lead lead-muted mb-3" style="max-width: 100%;" data-en="A large part of my projects focus on backend development, where I have learned to build complete applications by understanding not only the code, but also the software development processes.">Gran parte de mis proyectos se enfocan en el desarrollo backend, donde he aprendido a construir aplicaciones completas entendiendo no solo el codigo, sino tambien los procesos detras del desarrollo de software.</p>
+                    <p class="lead lead-muted mb-3" style="max-width: 100%;" data-en="My main stack is Python, although throughout my training I have also worked with Java, C, C++, and PHP. This has allowed me to understand different programming approaches and strengthen my logic.">Mi principal stack es Python, aunque a lo largo de mi formacion tambien he trabajado con Java, C, C++ y PHP. Esto me ha permitido entender diferentes enfoques de programacion y fortalecer mi logica.</p>
+                    <p class="lead lead-muted mb-3" style="max-width: 100%;" data-en="Although my focus is backend, I also have frontend knowledge, having developed interfaces from scratch with HTML, CSS, JavaScript, and Bootstrap. This allows me to understand full-stack integration between client and server.">Aunque mi enfoque es backend, tambien tengo conocimientos de frontend, habiendo desarrollado interfaces desde cero con HTML, CSS, JavaScript y Bootstrap. Esto me permite comprender la integracion completa entre cliente y servidor.</p>
                 </div>
 
                 <!-- Bloque 4 -->
                 <div class="row align-items-center g-4 mb-4 flex-row-reverse">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/4.png" alt="Imagen 4" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/1.png" alt="Imagen 4" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
-                        <h3 class="card-title mb-3">Proceso estructurado</h3>
-                        <p class="lead lead-muted">En el desarrollo de mis proyectos sigo un proceso estructurado que incluye:</p>
+                        <h3 class="card-title mb-3" data-en="Structured Process">Proceso estructurado</h3>
+                        <p class="lead lead-muted" data-en="In the development of my projects, I follow a structured process that includes:">En el desarrollo de mis proyectos sigo un proceso estructurado que
+                            incluye:</p>
                         <ul class="lead lead-muted ps-3">
-                            <li>Recoleccion de requerimientos</li>
-                            <li>Definicion de casos de uso</li>
-                            <li>Diseno de bases de datos normalizadas y relacionales</li>
+                            <li data-en="Requirements gathering">Recoleccion de requerimientos</li>
+                            <li data-en="Definition of use cases">Definicion de casos de uso</li>
+                            <li data-en="Design of normalized and relational databases">Diseno de bases de datos normalizadas y relacionales</li>
                         </ul>
                     </div>
                 </div>
@@ -99,73 +94,88 @@
                 <!-- Bloque 5 -->
                 <div class="row align-items-center g-4 mb-4">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/5.png" alt="Imagen 5" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/2.png" alt="Imagen 5" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
-                        <h3 class="card-title mb-3">Pruebas manuales</h3>
-                        <p class="lead lead-muted">Antes de implementar, realizo pruebas manuales para entender el comportamiento de los datos y asegurar que el diseno sea correcto.</p>
+                        <h3 class="card-title mb-3" data-en="Manual Testing">Pruebas manuales</h3>
+                        <p class="lead lead-muted" data-en="Before implementing, I conduct manual tests to understand data behavior and ensure the design is correct.">Antes de implementar, realizo pruebas manuales para entender el
+                            comportamiento de los datos y asegurar que el diseno sea correcto.</p>
                     </div>
                 </div>
 
                 <!-- Bloque 6 -->
                 <div class="row align-items-center g-4 mb-4 flex-row-reverse">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/6.png" alt="Imagen 6" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/3.png" alt="Imagen 6" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
                         <h3 class="card-title mb-3">Documentacion</h3>
-                        <p class="lead lead-muted">Documento la estructura de la base de datos y organizo mis proyectos con una arquitectura clara.</p>
+                        <p class="lead lead-muted">Documento la estructura de la base de datos y organizo mis proyectos
+                            con una arquitectura clara.</p>
                     </div>
                 </div>
 
                 <!-- Bloque 7 -->
                 <div class="row align-items-center g-4 mb-4">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/7.png" alt="Imagen 7" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/4.png" alt="Imagen 7" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
                         <h3 class="card-title mb-3">FastAPI</h3>
-                        <p class="lead lead-muted">Trabajo con FastAPI para la construccion de APIs, utilizando Peewee como ORM para modelar la base de datos, y Pydantic para la validacion de datos, estructuracion de respuestas y separacion de la logica de negocio.</p>
+                        <p class="lead lead-muted">Trabajo con FastAPI para la construccion de APIs, utilizando Peewee
+                            como ORM para modelar la base de datos, y Pydantic para la validacion de datos,
+                            estructuracion de respuestas y separacion de la logica de negocio.</p>
                     </div>
                 </div>
 
                 <!-- Bloque 8 -->
                 <div class="row align-items-center g-4 mb-4 flex-row-reverse">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/8.png" alt="Imagen 8" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/5.png" alt="Imagen 8" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
                         <h3 class="card-title mb-3">Modelos y esquemas</h3>
-                        <p class="lead lead-muted">Utilizo esquemas Pydantic para la validacion de datos, estructura de las respuestas de la API, documentacion y para separar la logica de negocio de la base de datos.</p>
+                        <p class="lead lead-muted">Utilizo esquemas Pydantic para la validacion de datos, estructura de
+                            las respuestas de la API, documentacion y para separar la logica de negocio de la base de
+                            datos.</p>
                     </div>
                 </div>
 
                 <!-- Bloque 9 -->
                 <div class="row align-items-center g-4 mb-4">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/9.png" alt="Imagen 9" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/6.png" alt="Imagen 9" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
                         <h3 class="card-title mb-3">Repositorios</h3>
-                        <p class="lead lead-muted">Los repositorios se utilizan en los endpoints para encapsular la logica de interaccion con la base de datos y mantener el codigo organizado.</p>
+                        <p class="lead lead-muted">Los repositorios se utilizan en los endpoints para encapsular la
+                            logica de interaccion con la base de datos y mantener el codigo organizado.</p>
                     </div>
                 </div>
 
                 <!-- Bloque 10 -->
                 <div class="row align-items-center g-4 mb-4 flex-row-reverse">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/10.png" alt="Imagen 10" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/7.png" alt="Imagen 10" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
                         <h3 class="card-title mb-3">Endpoints</h3>
-                        <p class="lead lead-muted">Despues de un detallado proceso, pruebas unitarias y de integracion, los endpoints quedan organizados por cada tabla.</p>
+                        <p class="lead lead-muted">Despues de un detallado proceso, pruebas unitarias y de integracion,
+                            los endpoints quedan organizados por cada tabla.</p>
                     </div>
                 </div>
 
                 <!-- Bloque 11 -->
                 <div class="row align-items-center g-4 mb-4">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/11.png" alt="Imagen 11" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/8.png" alt="Imagen 11" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
                         <h3 class="card-title mb-3">Seguridad y despliegue</h3>
@@ -182,18 +192,22 @@
                 <!-- Bloque 12 -->
                 <div class="row align-items-center g-4 mb-4 flex-row-reverse">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/12.png" alt="Imagen 12" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/9.png" alt="Imagen 12" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
                         <h3 class="card-title mb-3">Docker y separacion por capas</h3>
-                        <p class="lead lead-muted">Un adicional que implemento es la separacion por capas cliente-servidor, es decir, manejar un servidor exclusivo para el backend y otro para el frontend, utilizando Docker para el despliegue del backend.</p>
+                        <p class="lead lead-muted">Un adicional que implemento es la separacion por capas
+                            cliente-servidor, es decir, manejar un servidor exclusivo para el backend y otro para el
+                            frontend, utilizando Docker para el despliegue del backend.</p>
                     </div>
                 </div>
 
                 <!-- Bloque 13 -->
                 <div class="row align-items-center g-4 mb-4">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/13.png" alt="Imagen 13" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/10.png" alt="Imagen 13" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
                         <h3 class="card-title mb-3">VPS</h3>
@@ -211,38 +225,60 @@
                 <!-- Bloque 14 -->
                 <div class="row align-items-center g-4 mb-4 flex-row-reverse">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/14.png" alt="Imagen 14" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/11.png" alt="Imagen 14" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
                         <h3 class="card-title mb-3">Documentacion tecnica</h3>
-                        <p class="lead lead-muted">Adicionalmente se documenta todas las configuraciones y se desarrollan manuales tecnicos del proceso para mantenimiento y manejo de catastrofes.</p>
+                        <p class="lead lead-muted">Adicionalmente se documenta todas las configuraciones y se
+                            desarrollan manuales tecnicos del proceso para mantenimiento y manejo de catastrofes.</p>
                     </div>
                 </div>
 
                 <!-- Bloque 15 -->
                 <div class="row align-items-center g-4 mb-4">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/15.png" alt="Imagen 15" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/12.png" alt="Imagen 15" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
                         <h3 class="card-title mb-3">Conocimiento solido</h3>
-                        <p class="lead lead-muted">En conclusion, cuento con bases solidas en programacion (incluyendo POO) y destaco principalmente por mi logica de desarrollo y comprension del funcionamiento de sistemas completos: APIs REST, bases de datos, servidores y despliegue, Docker, asi como un dominio basico de los fundamentos del frontend.</p>
+                        <p class="lead lead-muted">En conclusion, cuento con bases solidas en programacion (incluyendo
+                            POO) y destaco principalmente por mi logica de desarrollo y comprension del funcionamiento
+                            de sistemas completos: APIs REST, bases de datos, servidores y despliegue, Docker, asi como
+                            un dominio basico de los fundamentos del frontend.</p>
                     </div>
                 </div>
 
                 <!-- Bloque 16 -->
                 <div class="row align-items-center g-4 mb-4 flex-row-reverse">
                     <div class="col-12 col-lg-6">
-                        <img src="../../assets/img/IMGR/16.png" alt="Imagen 16" class="img-fluid rounded-4" style="border: 1px solid var(--border);">
+                        <img src="../../assets/img/IMGR/13.png" alt="Imagen 16" class="img-fluid rounded-4 fade-in-up"
+                            style="border: 1px solid var(--border);">
                     </div>
                     <div class="col-12 col-lg-6">
                         <h3 class="card-title mb-3">Resultados</h3>
-                        <p class="lead lead-muted">Como resultado, he desarrollado aplicaciones web funcionales, organizadas y con buenas practicas, incluyendo una tienda online de ropa con panel de administracion para gestion completa del sistema.</p>
+                        <p class="lead lead-muted">Como resultado, he desarrollado aplicaciones web funcionales,
+                            organizadas y con buenas practicas, incluyendo una tienda online de ropa con panel de
+                            administracion para gestion completa del sistema.</p>
+                    </div>
+                </div>
+
+                <!-- Imagenes Extra -->
+                <div class="row g-4 mb-4 justify-content-center">
+                    <div class="col-12 col-md-6">
+                        <img src="../../assets/img/IMGR/14.png" alt="Imagen 14" class="img-fluid rounded-4 shadow-sm fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="../../assets/img/IMGR/15.png" alt="Imagen 15" class="img-fluid rounded-4 shadow-sm fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="../../assets/img/IMGR/16.png" alt="Imagen 16" class="img-fluid rounded-4 shadow-sm fade-in-up" style="border: 1px solid var(--border);">
                     </div>
                 </div>
 
                 <div class="text-center mt-4">
-                    <a href="../../index.html#/proyectos" class="btn btn-accent rounded-pill">Volver a proyectos</a>
+                    <a href="../../index.html#/proyectos" class="btn btn-accent rounded-pill" data-en="Back to projects">Volver a proyectos</a>
                 </div>
             </div>
         </section>
@@ -251,12 +287,45 @@
     <footer class="footer rounded-2 mt-3">
         <div class="container-md text-center text-white px-3">
             <div class="row pt-4 pb-4 g-2">
-                <div class="col-12">Volver al portafolio: <a href="../../index.html#/proyectos" class="text-decoration-none" style="color: rgba(238,241,247,.95)">Mis proyectos</a></div>
+                <div class="col-12" data-en="Back to portfolio: <a href='../../index.html#/proyectos' class='text-decoration-none' style='color: rgba(238,241,247,.95)'>My projects</a>">Volver al portafolio: <a href="../../index.html#/proyectos"
+                        class="text-decoration-none" style="color: rgba(238,241,247,.95)">Mis proyectos</a></div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="../../assets/js/loader.js"></script>
+
+    <style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll(".fade-in-up").forEach((img) => {
+                observer.observe(img);
+            });
+        });
+    </script>
+    <script src="../../assets/js/lang.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente RAG | Josue Gonzalez</title>
+    <link rel="icon" href="../../assets/img/j.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../../assets/css/site.css">
+    <style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .flex-row-reverse {
+            flex-direction: row-reverse !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loader matrix de puntos -->
+    <div id="loader" class="loading-overlay">
+        <div class="texto-animacion">
+            <h1 class="brand-mark mb-0 text-white">A.co<span class="brand-accent">d</span>e</h1>
+            <div class="lds-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradiant" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark rounded-4 mt-2 site-nav" data-bs-theme="dark">
+            <div class="container-md px-3">
+                <a class="navbar-brand d-flex align-items-center" href="../../index.html#/inicio"
+                    style="text-decoration: none;">
+                    <span class="brand-mark">A.co<span class="brand-accent">d</span>e</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-md-center gap-md-2 py-2 py-md-0">
+                        <li class="nav-item"><a href="../../index.html#/inicio" class="btn btn-accent rounded-pill" data-en="Home">Inicio</a></li>
+                        <li class="nav-item"><a href="../../index.html#/proyectos" class="btn btn-accent rounded-pill" data-en="My projects">Mis proyectos</a></li>
+                        <li class="nav-item">
+                            <select id="langSwitch" class="form-select form-select-sm bg-dark text-white border-secondary rounded-pill ms-md-2 mt-2 mt-md-0" style="min-width: 60px;">
+                                <option value="es">ES</option>
+                                <option value="en">EN</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-md px-3 site-main">
+        <section class="menu rounded-5 mt-3">
+            <div class="container-md px-2 px-md-3 py-4">
+                <p class="kicker" data-en="Project">Proyecto</p>
+                <h1 class="display-title mb-4" data-en="(Theory) AI Agent for Semantic Search with RAG and Embeddings">(teoria) Agente de IA para Búsqueda Semántica con RAG y Embeddings</h1>
+
+                <!-- Introduccion -->
+                <div class="mb-5 mt-4">
+                    <p class="lead lead-muted mb-3" style="max-width: 100%;" data-en="This project consists of the development of an artificial intelligence agent capable of finding semantic similarity between queries and documents, using modern techniques such as embeddings, vector databases (FAISS), and Retrieval-Augmented Generation (RAG).">Este proyecto consiste en el desarrollo de un agente de inteligencia artificial capaz de encontrar similitud semántica entre consultas y documentos, utilizando técnicas modernas como embeddings, bases de datos vectoriales (FAISS) y Retrieval-Augmented Generation (RAG).</p>
+                    <p class="lead lead-muted mb-3" style="max-width: 100%;" data-en="The main objective was to understand and implement from scratch how a system can understand the meaning of a question and retrieve relevant information, even when it does not literally match the original text.">El objetivo principal fue comprender e implementar desde cero cómo un sistema puede entender el significado de una pregunta y recuperar información relevante, incluso cuando no coincide literalmente con el texto original.</p>
+                </div>
+
+                <!-- Bloque 1 -->
+                <div class="row align-items-center g-4 mb-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG3/1.png" alt="Imagen 1" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="⚙️ Modular System Architecture">⚙️ Arquitectura Modular del Sistema</h3>
+                        <p class="lead lead-muted" data-en="The project was designed under a modular architecture, separating responsibilities to facilitate its maintenance, scalability, and understanding.">El proyecto fue diseñado bajo una arquitectura modular, separando responsabilidades para facilitar su mantenimiento, escalabilidad y comprensión.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 2 -->
+                <div class="row align-items-center g-4 mb-5 flex-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG3/2.png" alt="Imagen 2" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="📄 Document Processing and Splitting (Chunks)">📄 Procesamiento y División de Documentos (Chunks)</h3>
+                        <p class="lead lead-muted" data-en="A document loading system was implemented that includes a function to divide content into chunks (controlled-size text fragments).">Se implementó un sistema de carga de documentos que incluye una función para dividir el contenido en chunks (fragmentos de texto de tamaño controlado).</p>
+                        <p class="lead lead-muted mb-2" data-en="This allows:">Esto permite:</p>
+                        <ul class="lead lead-muted ps-3">
+                            <li data-en="Avoiding long and irrelevant responses">Evitar respuestas extensas e irrelevantes</li>
+                            <li data-en="Improving accuracy in information retrieval">Mejorar la precisión en la recuperación de información</li>
+                            <li data-en="Optimizing model performance">Optimizar el rendimiento del modelo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bloque 3 -->
+                <div class="row align-items-center g-4 mb-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG3/3.png" alt="Imagen 3" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="🔢 Generation of Embeddings">🔢 Generación de Embeddings</h3>
+                        <p class="lead lead-muted mb-3" data-en="Each text fragment is transformed into a numerical vector using embeddings, making it possible to represent the meaning of the content in a mathematical space.">Cada fragmento de texto es transformado en un vector numérico mediante embeddings, lo que permite representar el significado del contenido en un espacio matemático.</p>
+                        <p class="lead lead-muted" data-en="Thanks to this, the system can compare texts by semantic similarity rather than just word matching.">Gracias a esto, el sistema puede comparar textos por similitud semántica y no solo por coincidencia de palabras.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 4 -->
+                <div class="row align-items-center g-4 mb-5 flex-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG3/4.png" alt="Imagen 4" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="🗄️ Vector Database (FAISS)">🗄️ Base de Datos Vectorial (FAISS)</h3>
+                        <p class="lead lead-muted mb-2" data-en="FAISS was integrated as a vector search engine, in charge of:">Se integró FAISS como motor de búsqueda vectorial, encargado de:</p>
+                        <ul class="lead lead-muted ps-3 mb-3">
+                            <li data-en="Storing embeddings">Almacenar los embeddings</li>
+                            <li data-en="Indexing vectors for efficient searches">Indexar los vectores para búsquedas eficientes</li>
+                            <li data-en="Retrieving fragments most similar to a query">Recuperar los fragmentos más similares a una consulta</li>
+                        </ul>
+                        <p class="lead lead-muted" data-en="The database is generated in memory (cache), although the system can easily scale to cloud solutions such as Pinecone.">La base de datos se genera en memoria (cache), aunque el sistema puede escalar fácilmente a soluciones en la nube como Pinecone.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 5 -->
+                <div class="row align-items-center g-4 mb-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG3/5.png" alt="Imagen 5" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="🔎 RAG Pipeline (Retrieval-Augmented Generation)">🔎 Pipeline RAG (Retrieval-Augmented Generation)</h3>
+                        <p class="lead lead-muted mb-2" data-en="When the user makes a query:">Cuando el usuario realiza una consulta:</p>
+                        <ul class="lead lead-muted ps-3 mb-3">
+                            <li data-en="The question is converted into an embedding">La pregunta se convierte en embedding</li>
+                            <li data-en="FAISS looks for the most similar vectors in the database">FAISS busca los vectores más similares en la base de datos</li>
+                            <li data-en="The most relevant fragments are selected (Top-K)">Se seleccionan los fragmentos más relevantes (Top-K)</li>
+                            <li data-en="A dynamic context is built">Se construye un contexto dinámico</li>
+                            <li data-en="A prompt is generated combining context + question">Se genera un prompt combinando contexto + pregunta</li>
+                        </ul>
+                        <p class="lead lead-muted mb-3" data-en="This process allows the model to respond with greater accuracy and grounding.">Este proceso permite que el modelo responda con mayor precisión y fundamentación.</p>
+                        <p class="lead lead-muted mb-2" data-en="Additionally, filters were implemented such as:">Además, se implementaron filtros como:</p>
+                        <ul class="lead lead-muted ps-3">
+                            <li data-en="Most relevant documents queried">Documentos más relevantes consultados</li>
+                            <li data-en="Best result selection">Selección del mejor resultado</li>
+                            <li data-en="Fragment count control using Top-K">Control del número de fragmentos mediante Top-K</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bloque 6 -->
+                <div class="row align-items-center g-4 mb-5 flex-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG3/6.png" alt="Imagen 6" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="💬 Response Generation">💬 Generación de Respuesta</h3>
+                        <p class="lead lead-muted mb-2" data-en="Finally, the system generates a response based on the recovered context, also showing relevant information such as:">Finalmente, el sistema genera una respuesta basada en el contexto recuperado, mostrando además información relevante como:</p>
+                        <ul class="lead lead-muted ps-3">
+                            <li data-en="Primary source">Fuente principal</li>
+                            <li data-en="Documents used">Documentos utilizados</li>
+                            <li data-en="Most relevant fragments">Fragmentos más relevantes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Conclusion -->
+                <div class="mb-4 mt-5">
+                    <h3 class="card-title mb-3" data-en="🚀 Result">🚀 Resultado</h3>
+                    <p class="lead lead-muted mb-2" style="max-width: 100%;" data-en="The agent is capable of answering questions in a contextualized manner, demonstrating how a RAG-based system can:">El agente es capaz de responder preguntas de manera contextualizada, demostrando cómo un sistema basado en RAG puede:</p>
+                    <ul class="lead lead-muted ps-3 mb-4">
+                        <li data-en="Understand meaning, not just words">Comprender significado, no solo palabras</li>
+                        <li data-en="Retrieve accurate information from multiple documents">Recuperar información precisa de múltiples documentos</li>
+                        <li data-en="Generate grounded and traceable responses">Generar respuestas fundamentadas y trazables</li>
+                    </ul>
+                </div>
+
+                <div class="text-center mt-5 mb-2">
+                    <a href="../../index.html#/proyectos" class="btn btn-accent rounded-pill px-4" data-en="Back to projects">Volver a proyectos</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer rounded-2 mt-3">
+        <div class="container-md text-center text-white px-3">
+            <div class="row pt-4 pb-4 g-2">
+                <div class="col-12" data-en="Back to portfolio: <a href='../../index.html#/proyectos' class='text-decoration-none' style='color: rgba(238,241,247,.95)'>My projects</a>">Volver al portafolio: <a href="../../index.html#/proyectos" class="text-decoration-none" style="color: rgba(238,241,247,.95)">Mis proyectos</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Scroll fade effect and Loader -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const loader = document.getElementById("loader");
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            setTimeout(() => {
+                loader.classList.add("is-hidden");
+                document.querySelectorAll('.fade-in-up').forEach(el => {
+                    observer.observe(el);
+                });
+            }, 500);
+        });
+    </script>
+    <script src="../../assets/js/lang.js"></script>
+</body>
+
+</html>
