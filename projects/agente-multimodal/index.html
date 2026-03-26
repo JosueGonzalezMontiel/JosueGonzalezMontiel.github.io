@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente IA Multimodal | Josue Gonzalez</title>
+    <link rel="icon" href="../../assets/img/j.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../../assets/css/site.css">
+    <style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .flex-row-reverse {
+            flex-direction: row-reverse !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loader matrix de puntos -->
+    <div id="loader" class="loading-overlay">
+        <div class="texto-animacion">
+            <h1 class="brand-mark mb-0 text-white">A.co<span class="brand-accent">d</span>e</h1>
+            <div class="lds-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradiant" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark rounded-4 mt-2 site-nav" data-bs-theme="dark">
+            <div class="container-md px-3">
+                <a class="navbar-brand d-flex align-items-center" href="../../index.html#/inicio"
+                    style="text-decoration: none;">
+                    <span class="brand-mark">A.co<span class="brand-accent">d</span>e</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-md-center gap-md-2 py-2 py-md-0">
+                        <li class="nav-item"><a href="../../index.html#/inicio" class="btn btn-accent rounded-pill" data-en="Home">Inicio</a></li>
+                        <li class="nav-item"><a href="../../index.html#/proyectos" class="btn btn-accent rounded-pill" data-en="My projects">Mis proyectos</a></li>
+                        <li class="nav-item">
+                            <select id="langSwitch" class="form-select form-select-sm bg-dark text-white border-secondary rounded-pill ms-md-2 mt-2 mt-md-0" style="min-width: 60px;">
+                                <option value="es">ES</option>
+                                <option value="en">EN</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-md px-3 site-main">
+        <section class="menu rounded-5 mt-3">
+            <div class="container-md px-2 px-md-3 py-4">
+                <p class="kicker" data-en="Project">Proyecto</p>
+                <h1 class="display-title mb-4" data-en="Multimodal AI Agent for Document Analysis and Automation">Agente de IA Multimodal para Análisis de Documentos y Automatización</h1>
+
+                <!-- Introduccion -->
+                <div class="mb-5 mt-4">
+                    <p class="lead lead-muted mb-3" style="max-width: 100%;" data-en="This project integrates and expands upon previous developments to build an artificial intelligence agent capable of:">Este proyecto integra y expande los desarrollos previos para construir un agente de inteligencia artificial capaz de:</p>
+                    <ul class="lead lead-muted ps-3 mb-3">
+                        <li data-en="Answering general questions">Responder preguntas generales</li>
+                        <li data-en="Reading and analyzing PDF files">Leer y analizar archivos PDF</li>
+                        <li data-en="Searching for relevant information within documents">Buscar información relevante dentro de documentos</li>
+                        <li data-en="Generating summaries automatically">Generar resúmenes automáticamente</li>
+                        <li data-en="Creating and editing files autonomously">Crear y editar archivos de forma autónoma</li>
+                    </ul>
+                    <p class="lead lead-muted mb-3" style="max-width: 100%;" data-en="The result is a system that combines natural language processing, semantic search (RAG), and tool execution, approaching a functional intelligent assistant.">El resultado es un sistema que combina procesamiento de lenguaje natural, búsqueda semántica (RAG) y ejecución de herramientas, acercándose a un asistente inteligente funcional.</p>
+                </div>
+
+                <!-- Bloque 1 -->
+                <div class="row align-items-center g-4 mb-5 flex-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG4/1.png" alt="Imagen 1" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="🏗️ Modular Architecture">🏗️ Arquitectura Modular</h3>
+                        <p class="lead lead-muted" data-en="The system was designed under a modular architecture, separating each component to achieve greater clarity, scalability, and code maintenance.">El sistema fue diseñado bajo una arquitectura modular, separando cada componente para lograr mayor claridad, escalabilidad y mantenimiento del código.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 2 -->
+                <div class="row align-items-center g-4 mb-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG4/2.png" alt="Imagen 2" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="🔌 Tool Integration">🔌 Integración de Herramientas (Tools)</h3>
+                        <p class="lead lead-muted mb-2" data-en="Custom tools were developed and integrated that allow the agent to:">Se desarrollaron e integraron herramientas personalizadas que permiten al agente:</p>
+                        <ul class="lead lead-muted ps-3 mb-3">
+                            <li data-en="Read files (including PDFs)">Leer archivos (incluyendo PDFs)</li>
+                            <li data-en="Create new files">Crear nuevos archivos</li>
+                            <li data-en="Edit existing content">Editar contenido existente</li>
+                            <li data-en="Query information within documents">Consultar información dentro de documentos</li>
+                        </ul>
+                        <p class="lead lead-muted" data-en="Additionally, a RAG system was integrated to process and contextualize the extracted information.">Además, se integró un sistema RAG para procesar y contextualizar la información extraída.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 3 -->
+                <div class="row align-items-center g-4 mb-5 flex-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG4/3.png" alt="Imagen 3" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="🧠 Semantic Processing with RAG">🧠 Procesamiento Semántico con RAG</h3>
+                        <p class="lead lead-muted mb-2" data-en="The system implements a complete semantic search pipeline:">El sistema implementa un pipeline completo de búsqueda semántica:</p>
+                        <ul class="lead lead-muted ps-3 mb-3">
+                            <li data-en="Splitting text into chunks">División de textos en chunks</li>
+                            <li data-en="Generating embeddings per fragment">Generación de embeddings por fragmento</li>
+                            <li data-en="Filtering results via Top-K">Filtrado de resultados mediante Top-K</li>
+                            <li data-en="Using FAISS as a vector database">Uso de FAISS como base de datos vectorial</li>
+                        </ul>
+                        <p class="lead lead-muted" data-en="Metadata is also incorporated, allowing the identification of sources used in each response.">También se incorporan metadatos, permitiendo identificar las fuentes utilizadas en cada respuesta.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 4 -->
+                <div class="row align-items-center g-4 mb-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG4/4.png" alt="Imagen 4" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="💡 Intelligent Context Generation">💡 Generación de Contexto Inteligente</h3>
+                        <p class="lead lead-muted mb-2" data-en="The RAG module is in charge of:">El módulo RAG se encarga de:</p>
+                        <ul class="lead lead-muted ps-3 mb-3">
+                            <li data-en="Converting the question to an embedding">Convertir la pregunta en embedding</li>
+                            <li data-en="Comparing it against the vector database">Compararla contra la base vectorial</li>
+                            <li data-en="Building a relevant context">Construir un contexto relevante</li>
+                        </ul>
+                        <p class="lead lead-muted mb-2" data-en="The generated response includes:">La respuesta generada incluye:</p>
+                        <ul class="lead lead-muted ps-3 mb-3">
+                            <li data-en="Consulted documents">Documentos consultados</li>
+                            <li data-en="Primary source">Fuente principal</li>
+                            <li data-en="Specific fragments used">Fragmentos específicos utilizados</li>
+                        </ul>
+                        <p class="lead lead-muted" data-en="This allows for more accurate and traceable responses.">Esto permite respuestas más precisas y trazables.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 5 -->
+                <div class="row align-items-center g-4 mb-5 flex-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG4/5.png" alt="Imagen 5" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="🤝 System Integration within the Agent">🤝 Integración del Sistema en el Agente</h3>
+                        <p class="lead lead-muted" data-en="The RAG logic was encapsulated as a tool, allowing the agent to use it dynamically according to the user's intent.">Se encapsuló la lógica de RAG como una herramienta, permitiendo que el agente la utilice de forma dinámica según la intención del usuario.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 6 -->
+                <div class="row align-items-center g-4 mb-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG4/6.png" alt="Imagen 6" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="🎯 Capacity Orchestration">🎯 Orquestación de Capacidades</h3>
+                        <p class="lead lead-muted mb-2" data-en="The agent loads multiple tools, including:">El agente carga múltiples tools, incluyendo:</p>
+                        <ul class="lead lead-muted ps-3 mb-3">
+                            <li data-en="Document query (RAG)">Consulta de documentos (RAG)</li>
+                            <li data-en="File creation">Creación de archivos</li>
+                            <li data-en="Content editing">Edición de contenido</li>
+                        </ul>
+                        <p class="lead lead-muted" data-en="This allows it to make decisions on which action to execute at any given moment.">Esto le permite tomar decisiones sobre qué acción ejecutar en cada momento.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 7 -->
+                <div class="row align-items-center g-4 mb-5 flex-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG4/7.png" alt="Imagen 7" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="💠 Central Control (Main)">💠 Control Central (Main)</h3>
+                        <p class="lead lead-muted" data-en="The main module is in charge of orchestrating the interaction between the user, the model, and the tools, coordinating the entire flow of the system.">El módulo principal se encarga de orquestar la interacción entre el usuario, el modelo y las herramientas, coordinando todo el flujo del sistema.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 8 -->
+                <div class="row align-items-center g-4 mb-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG4/8.png" alt="Imagen 8" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="💾 Memory and Context Management">💾 Gestión de Memoria y Contexto</h3>
+                        <p class="lead lead-muted mb-2" data-en="To optimize performance:">Para optimizar el rendimiento:</p>
+                        <ul class="lead lead-muted ps-3 mb-3">
+                            <li data-en="Local memory in JSON format was implemented">Se implementó memoria local en formato JSON</li>
+                            <li data-en="The history sent to the model was limited">Se limitó el historial enviado al modelo</li>
+                            <li data-en="Upon exceeding the limit, the system automatically generates a summary of the previous context">Al superar el límite, el sistema genera automáticamente un resumen del contexto previo</li>
+                        </ul>
+                        <p class="lead lead-muted" data-en="This reduces token consumption without losing conversational coherence.">Esto reduce el consumo de tokens sin perder coherencia en la conversación.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque 9 -->
+                <div class="row align-items-center g-4 mb-5 flex-row-reverse">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG4/9.png" alt="Imagen 9" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="🏃 Agent Behavior">🏃 Comportamiento del Agente</h3>
+                        <p class="lead lead-muted mb-2" data-en="The agent is capable of:">El agente es capaz de:</p>
+                        <ul class="lead lead-muted ps-3">
+                            <li data-en="Maintaining natural conversations">Mantener conversaciones naturales</li>
+                            <li data-en="Identifying when to use a tool">Identificar cuándo usar una herramienta</li>
+                            <li data-en="Answering questions about documents">Responder preguntas sobre documentos</li>
+                            <li data-en="Generating new files with requested content">Generar nuevos archivos con contenido solicitado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bloque 10 -->
+                <div class="row align-items-center g-4 mb-4">
+                    <div class="col-12 col-lg-6">
+                        <img src="../../assets/img/IMG4/10.png" alt="Imagen 10" class="img-fluid rounded-4 fade-in-up" style="border: 1px solid var(--border);">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="card-title mb-3" data-en="💻 Agent-Generated Graphical Interface">💻 Interfaz Gráfica Generada por el Agente</h3>
+                        <p class="lead lead-muted" data-en="As a final result, the agent itself developed a desktop frontend to interact with the system more intuitively.">Como resultado final, el propio agente desarrolló un frontend de escritorio para interactuar con el sistema de manera más intuitiva.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5 mb-2">
+                    <a href="../../index.html#/proyectos" class="btn btn-accent rounded-pill px-4" data-en="Back to projects">Volver a proyectos</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer rounded-2 mt-3">
+        <div class="container-md text-center text-white px-3">
+            <div class="row pt-4 pb-4 g-2">
+                <div class="col-12" data-en="Back to portfolio: <a href='../../index.html#/proyectos' class='text-decoration-none' style='color: rgba(238,241,247,.95)'>My projects</a>">Volver al portafolio: <a href="../../index.html#/proyectos" class="text-decoration-none" style="color: rgba(238,241,247,.95)">Mis proyectos</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Scroll fade effect and Loader -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const loader = document.getElementById("loader");
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            setTimeout(() => {
+                loader.classList.add("is-hidden");
+                document.querySelectorAll('.fade-in-up').forEach(el => {
+                    observer.observe(el);
+                });
+            }, 500);
+        });
+    </script>
+    <script src="../../assets/js/lang.js"></script>
+</body>
+
+</html>
